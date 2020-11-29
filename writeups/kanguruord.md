@@ -5,7 +5,7 @@ Det finns många olika sätt att lösa det här problemet på (bl.a. med dynamis
 Vi kan börja med att fundera över hur vi löser delgrupper 2 och 4, där alla ungar garanterat är stökiga. Här behöver vi alltså bara kunna beräkna snabbt huruvida ett ord T är en unge till S eller inte. En enkel metod för att göra det är att gå igenom T tecken för tecken, och hitta nästa förekomsten av det tecknet i S. (Det är aldrig meningsfullt att hoppa över tecken i S, därav att algoritmen kan beskrivas som girig.) Om vi lyckas hitta alla tecken i S är T en unge, annars inte. Om vi hittar nästa förekomst i S genom att loopa får vi en tidskomplexitet på O(NM + K) -- för vardera av de N orden loopar vi potentiellt igenom hela S, som är M tecken lång, och vi går också igenom alla K tecken hos orden T. Detta klarar testgrupp 2.
 
 För att snabba upp algoritmen måste vi göra steget “hitta positionen för nästa förekomst av tecknet X i S, med start på position I” snabbare. Ett sätt att göra detta på är att ha en förberäknad tabell över “nästa förekomst” av storlek 26·M, som kan beräknas baklänges:
-```
+```cpp
 vector<int> next(26, -1);
 vector<vector<int>> nexts(M);
 for (int i = M-1; i >= 0; i--) {
