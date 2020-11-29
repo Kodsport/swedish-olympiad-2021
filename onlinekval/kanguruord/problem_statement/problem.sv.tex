@@ -1,0 +1,52 @@
+\problemname{Stökiga känguruungar}
+
+Ett \href{https://en.wikipedia.org/wiki/Kangaroo_word}{känguruord} är ett ord som bär på en synonym till sig självt (en ``unge''), på så vis att alla synonymens bokstäver förekommer i ordet, i samma ordning.
+T.ex. är \texttt{pastej} ett känguruord, eftersom det bär på synonymen \texttt{paj} (\texttt{\textbf{pa}ste\textbf{j}}).
+Även \texttt{aste} och \texttt{atj} hade räknats som ungar om vi låtsas att de vore ord, men däremot inte \texttt{paaj} eller \texttt{etsa}.
+Formellt uttryckt måste ungen vara en \emph{subsekvens} till ordet.
+
+Vidare kan vi säga att en unge är \emph{stökig} om den får plats i ordet på två olika sätt.
+\texttt{paj} är inte en stökig unge, men om ursprungsordet hade varit \texttt{paastej} hade den varit det --
+då hade den kunnat gömmas som antingen \texttt{\textbf{pa}aste\textbf{j}} eller \texttt{\textbf{p}a\textbf{a}ste\textbf{j}}.
+
+Givet ett (påhittat) ord $S$, och en lista med (påhittade) synonymer, hur många av synonymerna är stökiga ungar till $S$?
+
+\section*{Indata}
+\begin{itemize}
+  \item
+    Den första raden innehåller en icke-tom sträng bestående av bokstäver \texttt{a-z}, ordet $S$ som vi undrar över.
+
+  \item
+    Den andra raden innehåller heltalet $N$ ($1 \le N \le 100\,000$): antalet synonymer till ordet.
+
+  \item
+    De följande $N$ raderna innehåller synonymerna, vardera en icke-tom sträng bestående av bokstäver \texttt{a-z}.
+\end{itemize}
+
+Ingen synonym kommer förekomma två gånger, eller vara lika med $S$.
+
+Låt $M$ beteckna antalet bokstäver i $S$, och $K$ summan av antalet bokstäver i synonymerna.
+Då gäller att $M \le 100\,000$, $K \le 500\,000$.
+
+\section*{Utdata}
+Skriv ut ett heltal -- antalet ord som är stökiga ungar till $S$.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Begränsningar \\ \hline
+  $1$   & $20$       & $N, M, K \le 100$. \\ \hline
+  $2$   & $20$       & $N, M \le 1000$, och alla ungar är stökiga ungar. \\ \hline
+  $3$   & $20$       & $N, M \le 1000$. \\ \hline
+  $4$   & $20$       & Alla ungar är stökiga ungar. \\ \hline
+  $5$   & $20$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Exempelfall}
+I exempel 1 är de första tre orden ungar till $S$, och dessutom stökiga. Testfallet skulle därmed kunna finnas med i testgrupp 2 eller 4.
+
+I exempel 2 är de fyra första orden ungar, varav de två första dessutom stökiga ungar. Det här testfallet skulle inte kunna vara med i testgrupp 2 eller 4.

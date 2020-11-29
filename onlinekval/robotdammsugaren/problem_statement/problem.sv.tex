@@ -1,0 +1,38 @@
+\problemname{Robotdammsugaren}
+
+En robotdammsugare städar i en rutnäts-formad lagerlokal, där tunga lådor ligger på vissa rutor. Dammsugaren styrs av en sekvens av kommandon: upp ("\verb|^|"), höger ("\verb|>|"), ned ("\verb|v|"), vänster ("\verb|<|"). 
+När roboten får ett kommando åker den så långt den kan i den riktningen tills en låda är i vägen. Varje ruta robotdammsugaren någon gång befinner sig på städas, inklusive rutan den börjar på. Givet hur lagerlokalen ser ut, robotens startposition och en sekvens av kommandon, avgör hur många \textbf{olika rutor} som kommer ha städats när sekvensen är klar.
+
+\section*{Indata}
+\begin{itemize}
+  \item
+    Den första raden innehåller tre heltal: $R$ ($3 \le R \le 2000$) och $C$ ($3 \le C \le 2000$),
+    antalet rader och kolumner i den rutnäts-formad lagerlokalen, samt $N$ ($1 \le N \le 2000$), längden på kommandosekvensen.
+
+  \item
+    Den andra raden innehåller en $N$ lång sträng bestående av "\verb|^|", "\verb|>|","\verb|v|","\verb|<|", kommandosekvensen som skickas till roboten.
+
+  \item
+    De följande $R$ raderna utgör en beskrivning av hur den rutnäts-formad lagerlokalen ser ut.
+    Den $i$:te av dessa rader innehåller $C$ tecken som beskriver hur den $i$:te raden ser ut.
+    Varje tecken är antingen en punkt "\verb|.|" om en ruta är tom, en fyrkant "\verb|#|" om rutan innehåller en låda eller "\verb|O|" om rutan är robotens startposition. Det är garanterat att exakt en ruta innehåller "\verb|O|". Dessutom är det garanterat att alla rutor längst kanten av rutnätet är "\verb|#|".
+\end{itemize}
+
+\section*{Utdata}
+Skriv ut ett heltal -- antalet olika rutor som städas av roboten.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  Gruppen består av ett enda testfall, det som finns på vår affisch (\url{https://www.progolymp.se/2021/affisch.pdf}). \\ \hline 
+  $2$    & $20$        &  $R=3$ \\ \hline
+  $3$    & $30$        &  $N \times R \times C \le 1000$ \\ \hline 
+  $4$    & $30$       &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Exempelfall}
