@@ -1,9 +1,9 @@
 # Kontringsattack
 
-### 50p
+## 50p
 För 50 poäng testar vi alla k mellan 0 och den största skillnaden mellan Friberg och Skog på en match (vi kan sätta in 1000 då poängen är mindre än 1000). För varje k räknar vi differensen mellan antalet matcher då Friberg är bättre och antalet matcher då Skog är bättre och skriver ut det k som ger störst differens.
 
-Tidskomplexitet: O(n max(F, S)) ≈ 10^6 operationer
+Tidskomplexitet: $O(n \cdot \textrm{max}(F, S)) \approx 10^6$ operationer
 
 ```python
 #!/usr/bin/env python3
@@ -39,10 +39,10 @@ for k in range(1001):
 print(bästa_k)
 ```
 
-### 100p
+## 100p
 För 100 poäng kan vi inte gå igenom alla matcher för varje k. Istället vill vi gå igenom matcherna på så sätt att det räcker att göra det en gång. Detta kan vi åstakomma genom att gå igenom matcherna i sorterad ordning så att vi börjar på matchen med störst skillnaden mellan Friberg och Skog och slutar på den med minst. Vi använder en variabel w där vi sparar antalet fler matcher som Friberg har vunnit, samtidigt vet vi att tillhörande k:et är skillnad på nästa match. På så sätt behöver vi bara sparar k värdet då w är som störst. 
 
-Tidskomplexitet: O(n log(n))
+Tidskomplexitet: $O(n \textrm{log}(n))$
 
 ```python
 #!/usr/bin/env python3

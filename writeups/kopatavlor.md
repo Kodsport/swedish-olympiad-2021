@@ -1,6 +1,6 @@
 # Köpa tavlor
 
-Det första man bör inse för att lösa den här uppgiften är att vi kan anta att Mona bara går vänster till höger eller höger till vänster. Om den vänstraste tavlan Mona köper är tavla L och den högraste är tavla R så måste Mona spendera minst R-L sekunder bara på att gå mellan L och R. Men om hon ända ska gå så mycket kan vi lika gärna säga att hon börjar sin tavelhandel på tavla L, går bara åt höger, och slutar på tavla R. 
+Det första man bör inse för att lösa den här uppgiften är att vi kan anta att Mona bara går vänster till höger eller höger till vänster. Om den vänstraste tavlan Mona köper är tavla $L$ och den högraste är tavla $R$ så måste Mona spendera minst $R-L$ sekunder bara på att gå mellan $L$ och $R$. Men om hon ända ska gå så mycket kan vi lika gärna säga att hon börjar sin tavelhandel på tavla $L$, går bara åt höger, och slutar på tavla $R$. 
 
 ## Lösning 1: Memoisering/dynamisk programmering
 
@@ -21,14 +21,15 @@ def shortest_time(nuvarande_position, antal_tavlor_kvar):
     tid1 =  1 + shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar)
 
     #Köp tavlan, gå ett steg åt höger
-    tid2 =  1 + t[nuvarande_position] + shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar-1)
+    tid2 =  1 + t[nuvarande_position] + \
+        shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar-1)
 
     return min(tid1,tid2)
 ```
 
 Den här lösningen fungerar men stöter på ett problem: varje gång man anropar `shortest_time` anropas `shortest_time` på nytt två gånger. Dessa två nya anrop kommer vardera anropa två nya, o.s.v tills man kommer till ett av basfallen `antal_tavlor_kvar == 0` eller `nuvarande_position == n`. Det kommer göras exponentiellt många anrop till `shortest_time`, och man får Time Limit Exceeded för allt utom de allra minsta testfallen.
 
-Hur löser vi detta? Jo, vi inser att `shortest_time` bara tar in två argument, och om vi anropar `shortest_time` flera gånger med samma argument så ska svaret bli det samma. Därför kan vi spara svaret efter att vi kört funktionen, och sedan om vi stöter på exakt samma argument igen så kan vi kolla upp vårt sparade svar utan att behöva köra funktionen igen. Detta kallas för memoisering, och gör att vi bara göra ett riktigt anrop till `shortest_time` för varje möjligt värde på argumenten. `nuvarande_position` kan max ha 2000 värden, och `antal_tavlor_kvar` kan max ha 2000 värden. Alltså behöver vi köra funktionen max 2000·2000 gånger, vilket vi gott och väl hinner inom tidsgränsen. Tidskomplexiteten är O(N k).
+Hur löser vi detta? Jo, vi inser att `shortest_time` bara tar in två argument, och om vi anropar `shortest_time` flera gånger med samma argument så ska svaret bli det samma. Därför kan vi spara svaret efter att vi kört funktionen, och sedan om vi stöter på exakt samma argument igen så kan vi kolla upp vårt sparade svar utan att behöva köra funktionen igen. Detta kallas för memoisering, och gör att vi bara göra ett riktigt anrop till `shortest_time` för varje möjligt värde på argumenten. `nuvarande_position` kan max ha 2000 värden, och `antal_tavlor_kvar` kan max ha 2000 värden. Alltså behöver vi köra funktionen max 2000·2000 gånger, vilket vi gott och väl hinner inom tidsgränsen. Tidskomplexiteten är $O(Nk)$.
 
 ```python
 #!/usr/bin/env python3
@@ -51,7 +52,9 @@ def shortest_time(nuvarande_position, antal_tavlor_kvar):
         return mem[nuvarande_position][antal_tavlor_kvar]
 
     tid1 = 1 + shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar)
-    tid2 = 1 + t[nuvarande_position] + shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar-1)
+    tid2 = 1 + t[nuvarande_position] + \
+        shortest_time(antal_tavlor_kvar+1, antal_tavlor_kvar-1)
+        
     mem[nuvarande_position][antal_tavlor_kvar] = min(tid1,tid2)
     return mem[nuvarande_position][antal_tavlor_kvar]
 
@@ -60,11 +63,11 @@ print(min([dp(i, k)-1 for i in range(n)]))
 ```
 
 ## Lösning 2: Iterera + prioritetskö
-Det går också att lösa den här uppgiften utan rekursion eller dynamisk programmering. Ifall vi vet både L och R, dvs vilken tavla Mona börjar och slutar på, så kan vi relativt enkelt räkna ut hur lång tid det tar. Insikten är att Mona alltid vill köpa de k tavlorna mellan L och R som går snabbast att köpa. Tiden det tar är alltså R-L+(summan av de k minsta talen bland t[L], t[L+1], ..., t[R]). Denna summa kan vi räkna ut på O((R-L)log(R-L)) tid genom att lägga talen i en lista, sortera listan och summera de k första talen. Detta ger en O(N³log(N))-lösning. 
+Det går också att lösa den här uppgiften utan rekursion eller dynamisk programmering. Ifall vi vet både $L$ och $R$, dvs vilken tavla Mona börjar och slutar på, så kan vi relativt enkelt räkna ut hur lång tid det tar. Insikten är att Mona alltid vill köpa de $k$ tavlorna mellan $L$ och $R$ som går snabbast att köpa. Tiden det tar är alltså $R-L+(\textrm{summan av de k minsta talen bland }t_L, t_{L+1}, ..., t_R). Denna summa kan vi räkna ut på $O((R-L)\textrm{log}(R-L))$ tid genom att lägga talen i en lista, sortera listan och summera de k första talen. Detta ger en O(N³log(N))-lösning. 
 
-Vi kan också vara lite smartare. Om vi fixerar L och sedan itererar över alla möjligheter för R, så ändras den här listan av tavlor mellan L och R så mycket i varje steg. Närmare bestämt vill vi kunna lägga till en ny tavla, och sedan snabbt kunna hitta summan av de k snabbaste tavlorna. Detta går att åstakomma med en prioritetskö, vilket är en datastruktur där man snabbt kan lägga in tal, snabbt få reda på vad det största talet är och snabbt plocka bort det största talet. När vi ökar R kan vi lägga in t[R] i vår prioritetskö, och sedan ta bort de största talen från prioritetskön tills den innehåller exakt k element. Om vi håller koll på nuvarande summan av alla element i prioritetskön genom att addera när vi lägger in saker och subtrahera när vi tar bort, så kan vi snabbt få den summan vi vill ha, summan av de k snabbaste tavlorna.
+Vi kan också vara lite smartare. Om vi fixerar $L$ och sedan itererar över alla möjligheter för $R$, så ändras den här listan av tavlor mellan L och $R$ så mycket i varje steg. Närmare bestämt vill vi kunna lägga till en ny tavla, och sedan snabbt kunna hitta summan av de $k$ snabbaste tavlorna. Detta går att åstakomma med en prioritetskö, vilket är en datastruktur där man snabbt kan lägga in tal, snabbt få reda på vad det största talet är och snabbt plocka bort det största talet. När vi ökar $R$ kan vi lägga in t[R] i vår prioritetskö, och sedan ta bort de största talen från prioritetskön tills den innehåller exakt $k$ element. Om vi håller koll på nuvarande summan av alla element i prioritetskön genom att addera när vi lägger in saker och subtrahera när vi tar bort, så kan vi snabbt få den summan vi vill ha, summan av de $k$ snabbaste tavlorna.
 
-Detta ger en O(N²log(N))-lösning.
+Detta ger en $O(N^2\textrm{log}(N))$-lösning.
 
 ```python
 #!/usr/bin/env python3
