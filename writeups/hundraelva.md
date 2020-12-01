@@ -29,10 +29,10 @@ Varför är detta snabbt nog? I svaret behövs maximalt 10 st av varje sorts sed
 
 ### Bevisidé för att giriga strategin fungerar.
 
-Låt a_1 = 1, a_2 = 11, a_3 = 111, a_4 = 1111 osv.
-Det gäller att 10a_i + a_j = a_{i+1} + 10 a_{j-1} för alla i >= j >= 2
-och 10a_i + a_1 = a_{i+1} för alla i >= 1.
-Detta betyder att om man har sedlar som summerar till minst a_{i+1},
+Låt $a_1 = 1$, $a_2 = 11$, $a_3 = 111$, $a_4 = 1111$ osv.
+Det gäller att $10a_i + a_j = a_{i+1} + 10 a_{j-1}$ för alla $i >= j >= 2$
+och $10a_i + a_1 = a_{i+1}$ för alla $i >= 1$.
+Detta betyder att om man har sedlar som summerar till minst $a_{i+1}$,
 så är det aldrig sämre att byta sedlarna till att använda minst en till sedel av
-valören a_{i+1}.
+valören $a_{i+1}$.
 

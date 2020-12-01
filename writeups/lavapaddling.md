@@ -76,7 +76,7 @@ print(r)
 
 ## Lösning 2: Räkna baklänges
 
-Det finns också en annan lösning, som kan vara lättare att koda men kanske svårare att komma på. Ifall vi vänder på problemet, och ställer oss frågan: "Om vi vill ha kvar P' paddlar när vi kommer till ö X, vad är det minsta antalet paddlar P vi behöver ha på ö X-1?". Genom att utgå från `paddlar_kvar` ovan går det att komma fram till formeln P=max(P', ⌈(D[X]+P')/K⌉) där ⌈x⌉ betyder x avrundat uppåt till närmsta heltal. Om man börjar på sista ön med P'=0, så kan man gå baklänges genom alla öar, och med hjälp av formeln hela tiden räkna ut vad det minsta antalet paddlar man behöver är:
+Det finns också en annan lösning, som kan vara lättare att koda men kanske svårare att komma på. Ifall vi vänder på problemet, och ställer oss frågan: "Om vi vill ha kvar P' paddlar när vi kommer till ö X, vad är det minsta antalet paddlar P vi behöver ha på ö X-1?". Genom att utgå från `paddlar_kvar` ovan går det att komma fram till formeln P=max(P', $\lceil$(D[X]+P')/K$\rceil$) där $\lceil$x$\rceil$ betyder x avrundat uppåt till närmsta heltal. Om man börjar på sista ön med P'=0, så kan man gå baklänges genom alla öar, och med hjälp av formeln hela tiden räkna ut vad det minsta antalet paddlar man behöver är:
 
 ```python
 P = 0
