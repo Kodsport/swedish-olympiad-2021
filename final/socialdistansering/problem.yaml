@@ -1,0 +1,7 @@
+source: Programmeringsolympiadens final 2021
+author: Fredrik Ekholm
+license: cc by-sa
+type: scoring
+name: Social Distansering
+grading:
+    show_test_data_groups: yes

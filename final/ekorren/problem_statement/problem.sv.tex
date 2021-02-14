@@ -1,0 +1,33 @@
+\problemname{Ekorren i trädet}
+
+En ekorre bor i ett träd med $N$ noder och $N-1$ kanter.
+Varje kant har längd 1 och kopplar ihop två noder.
+I några av noderna har ekorren gömt nötter, som han nu vill samla in.
+Om ekorren börjar vid nod 1 (roten av trädet),
+vad är kortaste avståndet han behöver gå för att hämta alla nötter och återvända till nod 1? Ekorren kan bära flera nötter samtidigt.
+
+Det är garanterat att man kan ta sig mellan alla par av noder genom att gå via en sekvens av kanter.
+
+
+\section*{Indata}
+Den första raden innehåller två heltal $N$ och $K$ ($1 \le K\le N \le 100\,000$) -- antal noder i trädet och antal noder med nötter på.
+Den andra raden innehåller $K$ unika heltal -- noderna där ekorren har gömt nötter. Noderna är indexerade 1 till $N$.
+Därefter följer $N-1$ rader. Varje rad innehåller två heltal $1 \le a,b \le N$ som betyder att det går en kant mellan nod $a$ och nod $b$.
+
+\section*{Utdata}
+Skriv ut ett heltal -- det kortaste avståndet ekorren behöver gå för att hämta alla nötter.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  Den $i$:te kanten går mellan nod $i$ och $i+1$ (för $1\le i \le N-1$) \\ \hline 
+  $2$    & $40$        &  $1 \le K \le N \le 1000$ \\ \hline
+  $3$    & $40$        &  Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+\section*{Exempelfall}

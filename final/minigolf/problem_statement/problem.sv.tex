@@ -1,0 +1,44 @@
+\problemname{Minigolf}
+
+%TODO improve statment
+
+Du spelar minigolf på ett $R\times C$ rutnät.
+På ett slag kan du putta golfbollen valfritt antal steg upp till $K$ rakt i en av de fyra riktningarna upp, ner, höger, vänster. Du kan såklart inte putta bollen igenom en vägg eller utanför banan.
+
+Din uppgift är att beräkna det minsta antalet puttar som behövs för att få ner bollen i hålet.
+
+\section*{Indata}
+Den första raden innehåller tre heltal $R$, $C$ och $K$
+($1 \le R\times C \le 1\,000\,000$ och $1\le K \le 1\,000\,000$) -- antal rader, antalet kolumner och hur långt du kan putta.
+
+Därefter följer $R$ rader, vardera med $C$ tecken, som beskriver minigolfbanan:
+\begin{itemize}
+  \item ``\verb!.!'' betyder att rutan är tom.
+  \item ``\verb!#!'' betyder att rutan har en vägg i sig.
+  \item ``\verb!S!'' betyder att denna rutan är den du startar från. Det kommer finnas exakt ett ``\verb!S!'' i indatan.
+  \item ``\verb!G!'' betyder att denna rutan är den med hålet i. Det kommer finnas exakt ett ``\verb!G!'' i indatan.
+\end{itemize}
+
+Det är garanterat att det är möjligt att nå hålet från startrutan.
+
+\section*{Utdata}
+Skriv ut ett heltal -- det minsta antalet puttar du behöver för att skjuta bollen i hålet.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$   & $8$        & Det finns inga väggar (``\verb!#!'') i indatan \\ \hline
+  $2$   & $18$       & $R = 2$ \\ \hline
+  $3$   & $22$       & $1\le R,C,K\le 100$ \\ \hline
+  $4$   & $25$       & $K \ge \text{max}(R,C)$, dvs du är inte begränsad av hur långt du kan putta \\ \hline
+  $5$   & $27$       & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+Notera att vissa exemplelfall är inte giltiga i vissa testfallsgrupper.
+
+\section*{Exempelfall}

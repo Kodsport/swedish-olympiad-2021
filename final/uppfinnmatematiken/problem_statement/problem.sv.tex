@@ -1,0 +1,57 @@
+  \problemname{Återuppfinnande av matematiken}
+
+Ånej, all matematik har gått upp i rök! Hur gick det här till? Du hinner inte fundera över saken, 
+utan inser att du måste återuppfinna så mycket matematik som möjligt innan världen går under!
+Även om all faktisk kunskap försvunnit så vet du lite om matematiken. 
+Matematiken är uppbyggd av $N$ satser. Varje sats, $i$, beror på ett antal satser $a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$, 
+som måste bevisas innan man kan börja med satsen. För att visa sats $i$ måste du spendera $t_i$ tid. 
+Värdet av en visad sats är $v_i$.
+
+Du har $T$ tid på dig. Välj vilka satser du ska bevisa för att maximera det totala värdet av matematiken du hinner återuppfinna.
+\section*{Indata}
+Den första raden innehåller ett heltal $C$ ($0 \leq C \leq 10$), numret på testfallet ($0$ är exempelfallet nedan).
+
+Den andra raden innehåller två heltal: $N$ ($1 \le N \le 10^5$) och $T$ ($1 \le T \le 10^7$)
+
+Därefter följer $N$ beskrivningar av satser.
+En beskrivning av en sats består av två rader. Först kommer en rad med tre heltal: $0 \le t_i \le 10^4$, $0 \le v_i \le 10^4$, $0 \le k_i \le N$. 
+Därefter kommer en rad med $k_i$ heltal: $a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$ -- indexen på satserna som måste bevisas innan den här satsen.
+Satserna är indexerade från 0 i ordningen de kommer i input.
+
+\section*{Utdata}
+Skriv först ut en rad med ett tal $S$ ($0 \le S \le N$), antal satser du ska bevisa. Skriv därefter ut en rad med $S$ heltal, satserna du bevisar i ordning du bevisar dem.
+
+\section*{Poängsättning}
+Ditt program kommer att testas på $10$ testfall, och poängsättas baserat på hur det står sig relativt domarnas lösning.
+Om din inskickning på ett givet testfall uppnår ett totalt värde av satser $X$, och totala värdet domarna uppnått på det testfallet är $Y$,
+så blir din poäng på det testfallet $10 \cdot (X / Y)^3$, avrundat till två decimaler.
+
+Din poäng för en inskickning är summan av poängen för testfallen, och din totala poäng är poängen för den bästa inskickningen.
+Det går alltså inte att kombinera testfall mellan olika inskickningar, utan du måste skicka in ett enda program som
+maximerar din poäng på alla testfall samtidigt.
+
+Din lösning kan maximalt få $100$ poäng, även om den är bättre än den domarna skrivit.
+
+Exempeltestfallet kommer alltid att ge $0$ poäng.
+
+\section*{Testfall}
+Till höger kan ladda ned testfall som är genererade på samma sätt som de riktiga testfallen,
+men med annat \href{https://en.wikipedia.org/wiki/Random_seed}{slumpseed}.
+
+Här är beskrivningar av de $10$ testfallen som förekommer.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Testfall & Gränser  \\ \hline
+$1$       & $N=500,T=5000,k_i \le 3$  \\ \hline
+$2$       & $N=500,T=5000,k_i \le 30$  \\ \hline
+$3$       & $N=500,T=50000,k_i \le 3$  \\ \hline
+$4$       & $N=500,T=50000,k_i \le 30$  \\ \hline
+$5$       & $N=10^5,T=10^7,k_i \le 3$  \\ \hline
+$6$       & $N=10^5,T=10^7,k_i \le 30$  \\ \hline
+$7$       & $N=300,T=30000$ och $k_i=1$ för alla $i\neq0$\\ \hline
+$8$       & $N=300,T=30000$ och varje sats krävs för att bevisa max 1 annan sats. \\ \hline
+$9$       & $N=10^5,T=10^7$ och $k_i=1$ för alla $i\neq0$ \\ \hline
+$10$      & $N=10^5,T=10^7$ och varje sats krävs för att bevisa max 1 annan sats.  \\ \hline
+\end{tabular}
