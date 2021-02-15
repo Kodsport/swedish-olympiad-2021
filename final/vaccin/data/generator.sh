@@ -17,7 +17,6 @@ sample 3
 
 group group1 50
 limits max_n=100 max_k=1
-include_group sample
 tc g1-rand-1 gen_random n=100 k=1
 tc g1-rand-2 gen_random n=100 k=1
 tc g1-rand-3 gen_random n=100 k=1
@@ -26,6 +25,7 @@ tc g1-rand-5 gen_random n=100 k=1
 tc g1-rand-7 gen_random n=100 k=1
 
 group group2 50
+include_group sample
 limits max_n=100000 max_k=100000
 tc g2-rand-1 gen_random n=100000 k=100000
 tc g2-rand-2 gen_random n=100000 k=100000
