@@ -1,0 +1,48 @@
+\problemname{Baka bullar}
+
+
+Du har bakat bullar och lagt dem på en lång rad. Totalt har du $N$ bullar, där den $i$:te finns på
+$x$-koordinat $x_i$. Du skulle vilja samla ihop bullarna så att de ligger bredvid varandra, alltså
+på koordinater $a, a+1, a+2, \dots, a+N-1$ för något $a$. Men bullarna är väldigt varma och kan 
+endast hanteras med hjälp av en spade med bredd $D$. I ett drag kan du välja ett intervall av längd
+$D$ och vända på alla bullar i det intervallet. Mer specifikt kan du välja ett intervall på formen
+$[L, L+D-1]$. En bulle vars $x$-koordinat uppfyller $L \leq x_i \leq L+D-1$ flyttas då till $x$-koordinat
+$L + D - 1 - (x_i - L)$.
+
+Du får givet de $N$ bullarnas positioner och talet $D$. Din uppgift är att hitta en sekvens av drag
+så att bullarna hamnar bredvid varandra. Du får använda högst $10^5$ drag.
+
+
+\section*{Indata}
+Den första raden innehåller två heltal $N$ och $D$ ($2 \leq N, D \leq 200$).
+
+Den andra raden innehåller $N$ heltal $x_i$ ($1 \leq x_i \leq 200$). Alla talen $x_i$ är olika.
+
+\section*{Utdata}
+Om det inte finns någon lösning, skriv ut ``-1''.
+
+Annars, skriv först ut en rad med heltalet $M$ ($0 \leq M \leq 10^5$), antalet drag.
+Skriv därefter ut $M$ rader, där den $i$:te innehåller heltalet $L_i$.
+
+Detta innebär att det $i$:te draget vänder på intervallet $[L_i, L_i + D - 1]$.
+Talet $L_i$ får vara nästan\footnote{Heltalet måste uppfylla $-2147483648 \leq L_i \leq 2147483647$, annars får du fel svar.} vilket heltal som helst, inklusive negativt. 
+Lösningen räknas som korrekt om bullarna ligger bredvid varandra efter att samtliga drag utförts.
+Ordningen på bullarna spelar ingen roll.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $9$        &  $N=2$ \\ \hline 
+  $2$    & $9$        &  $D=2$ \\ \hline
+  $3$    & $14$        &  $D=3$ \\ \hline
+  $4$    & $14$        &  $N, D, x_i \leq 5$ \\ \hline 
+  $5$    & $24$        &  $N, D, x_i \leq 30$ \\ \hline
+  $6$    & $30$        &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Exempelfall}
