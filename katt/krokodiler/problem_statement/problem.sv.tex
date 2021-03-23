@@ -1,0 +1,51 @@
+\problemname{Krokodiler}
+
+På sin resa genom Australien har Klas börjat få slut på pengar. Som tur är hittade han ett 
+väldigt bra extrajobb som går ut på att jaga bort krokodiler från folks trädgårdar. Hans första 
+uppdrag är en swimmingpool som kan representeras som ett $N \times M$ rutnät, där varje cell kan vara 
+tom eller innehålla en sovande krokodil. Varje sovande krokodil är riktad åt ett av de fyra
+vädersträcken. Klas kan väcka en krokodil genom att kasta ett äpple på den. En väckt krokodil simmar  
+blixtsnabbt åt det håll den är riktad, tills den antingen tar sig ut ur poolen eller 
+krockar med en annan krokodil. Om två krokodiler krockar blir båda väldigt arga och risken är stor att 
+de attackerar Klas.
+
+Din uppgift är att räkna ut hur många krokodiler Klas kan få ut ur poolen om han kastar äpplen på 
+ett optimalt sätt. Två krokodiler får inte krocka. Klas kan bara kasta ett äpple i taget, och krokodilerna 
+simmar så pass snabbt att han inte hinner kasta nästa äpple förrän den förra krokodilen rört sig färdigt.
+
+\illustration{0.26}{krokodil.PNG}{Bilden visar exempel 3.}
+
+\section*{Indata}
+Den första raden innehåller två heltal $N$ och $M$ ($1 \leq N,M \leq 2000$), antalet rader och kolumner
+i rutnätet.
+
+De nästkommande $N$ raderna innehåller vardera en sträng av längd $M$. Varje sträng består av tecknen 
+``.'', ``N'', ``E'', ``S'', ``W''. En punkt representerar en tom cell. De andra tecknen representerar  
+riktningen hos en sovande krokodil i den cellen (norr, öster, söder, väster). 
+
+
+\section*{Utdata}
+Skriv ut ett heltal, det maximala antalet krokodiler Klas kan få ut ur poolen.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $30$        &  $N, M \leq 30$ \\ \hline
+  $2$    & $30$        &  $N, M \leq 500$ \\ \hline
+  $3$    & $40$        &  $N, M \leq 2000$ \\ \hline
+\end{tabular}
+
+\section*{Förklaring av exempel}
+
+I det första exemplet kan Klas enkelt få ut alla krokodilerna eftersom de alla är riktade bort
+från varandra. Det spelar inte ens någon roll i vilken ordning han kastar äpplena.
+
+I det andra exemplet går det inte att få ut någon av krokodilerna eftersom de är riktade mot varandra.
+
+I det tredje exemplet kan Klas få ut de två översta krokodilerna, och de första två i den andra raden. 
+
