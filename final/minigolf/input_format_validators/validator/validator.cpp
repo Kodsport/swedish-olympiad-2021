@@ -19,7 +19,7 @@ void run() {
   ll c = Int(1, Arg("max_c", large)); Space();
   ll k = Int(1, Arg("max_k", large)); Endl();
   ll max_rc = Arg("max_rc",large);
-  if(r*c > r*c) die_line("r*c too large");
+  if(r*c > max_rc) die_line("r*c too large");
   if(Arg("k_infty",0) && k < max(r,c)) die_line("k < max(r,c)");
 
   vi char_cnt(256);

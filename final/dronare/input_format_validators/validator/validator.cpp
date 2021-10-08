@@ -11,10 +11,11 @@ void run() {
 	int sameprice = Arg("sameprice");
 	int n = Int(1, maxn);
 	Space();
-	int b = Int(1, 200000);
+	int b = Int(1, 100000);
 	Space();
 	int w = Int(1, 1000);
 	Endl();
+	assert(n*b >= 1 && n*b <= 100000);
 
 	seen.resize(n);
 	e.resize(n);

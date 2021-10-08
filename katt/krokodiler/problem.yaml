@@ -1,0 +1,8 @@
+# author: Maxim Akhmedov
+source: KATT 2021 # http://neerc.ifmo.ru/school/archive/2013-2014/ru-olymp-roi-2014-statement-day1.pdf
+rights_owner: Programmeringsolympiaden
+license: permission
+type: scoring
+grading:
+    show_test_data_groups: yes
+    

@@ -1,18 +1,15 @@
 \problemname{Lavapaddling}
-Lav är tillfångatagen av en ond häxa i en vulkan och måste nu utföra ett uppdrag åt henne.
+Lav är tillfångatagen av en ond häxa i en vulkan. I det stora lavahavet i vulkanen ligger $N$ öar på en lång rad ($1 \le N \le 20$).
+Avståndet mellan den $i$:te och den $i+1$:te ön är $d_i$, och det gäller att $1 \le d_1, d_2, \dots, d_{n-1} \le 1000$. Avstånden är givna i enheten ``häxameter'', vilket motsvarar exakt $H$ meter ($1 \le H \le 10^{12}$). Häxan bor på den första ön i raden, och det är här Lav befinner sig just nu.
 
-I det stora lavahavet i vulkanen ligger $N$ öar på en lång rad.
-Avståndet mellan den $i$:te och den $i+1$:te ön är $d_i$. Avstånden är givna i enheten ``häxameter'', vilket motsvarar exakt $H$ meter.  
-Häxan bor på den första ön i raden, och det är här Lav befinner sig just nu.
-
-Häxan har glömt sin bok med alla trollformler på den sista ön i raden, och Lav måste åka och hämta den. Till sin hjälp har han en lavabåt och ett antal paddlar. 
-Varje paddel håller för att ta $K$ paddeltag, där varje paddeltag för båten framåt en meter, innan paddeln brunnit upp på grund av lavan.
+Häxan har glömt sin bok med alla trollformler på den sista ön i raden, och tvingar nu Lav att åka och hämta den. Till sin hjälp har han en lavabåt och ett antal paddlar. 
+Varje paddel håller för att ta $K$ paddeltag ($1 \le K \le 15$), där varje paddeltag för båten framåt en meter, innan paddeln brunnit upp på grund av lavan.
 Lav får med sig ett antal paddlar från häxan, och behöver inte göra slut helt på en paddel innan han byter till en annan paddel.
 
 Lav får dessutom med sig en trollformel från häxan som han kan använda när han står på en ö. Trollformeln lagar en paddel som han paddlat lite grann med utan att den brann upp helt.
-Då kan han återigen använda den för att paddla $K$ meter.
-Lav kan använda trollformeln hur många gånger han vill när han står på en ö.
-Vad är det minsta antalet paddlar häxan behöver ge Lav så att han kan klara uppdraget?
+Då kan han återigen använda den för att paddla $K$ meter. Lav kan använda trollformeln hur många gånger han vill när han står på en ö.
+
+Skriv ett program som beräknar det minsta antalet paddlar häxan behöver ge Lav så att han kan klara uppdraget.
 
 \section*{Indata}
 På den första raden står tre heltal: $1 \le N \le 20$ -- antalet öar, $1 \le K \le 15$ -- antalet meter du kan paddla med en paddel innan den brinner upp och $1 \le H \le 10^{12}$ -- antal meter en häxameter motsvarar.
@@ -22,8 +19,18 @@ På den andra raden står $N-1$ heltal $1 \le d_1, d_2, \dots, d_{n-1} \le 1000$
 Programmet ska skriva ut ett heltal: det minsta antalet paddlar häxan behöver ge Lav så att han kan klara av uppdraget.
 
 \section*{Poängsättning}
-För testfall värda 1 poäng gäller det att $K=1$ och $H\le 100$. \\
-För testfall värda ytterligare 2 poäng gäller det att $H=1$.
+Din lösning kommer att testas på fem olika testfall.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Fall & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  $K = 1, H \le 100$ \\ \hline 
+  $2$    & $20$        &  $H = 1$ \\ \hline 
+  $3$    & $20$        &  $H = 1$ \\ \hline 
+  $4$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+  $5$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
 
 \section*{Förklaring av exempel}
 

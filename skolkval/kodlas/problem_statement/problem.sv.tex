@@ -7,14 +7,14 @@ Kodlåset består av $N$ intilliggande skivor.
 Varje skiva har $M$ segment, där ett segment antingen är ifyllt eller ett hål.
 För att skriva in en kod vrider man på skivorna.
 Varje skiva kan sättas i $M$ olika lägen, eftersom mekanismen inte tillåter att du vrider skivan mindre än ett helt segment.
-Låset öppnas om det \textbf{någonstans} går ett hål genom alla skivor på samma ställe.
+Låset öppnas om det \emph{någonstans} går ett hål genom alla skivor på samma ställe.
 
-Vi kan beskriva varje skiva som en sträng bestående av "\texttt{.}" och "\texttt{\#}",
-där "\texttt{.}" representerar ett segment med hål i och "\texttt{\#}" representerar ett ifyllt segment.
+Vi kan beskriva varje skiva som en sträng bestående av ``\texttt{.}'' och ``\texttt{\#}'',
+där ``\texttt{.}'' representerar ett segment med hål i och ``\texttt{\#}'' representerar ett ifyllt segment.
 Att rotera en skiva ett steg kan då ses som att ta sista tecknet i strängen och lägga det i början.
 Om skivan roteras $M$ steg kommer den tillbaka till läget den började i.
 
-Exempelvis kan skivan "\texttt{.\#..\#}" ställas in i följande 5 lägen
+Exempelvis kan skivan ``\texttt{.\#..\#}'' ställas in i följande 5 lägen:
 
 \begin{center}
   \begin{tabular}{l l|l l l|l l l|l l l|l l}
@@ -22,8 +22,8 @@ Exempelvis kan skivan "\texttt{.\#..\#}" ställas in i följande 5 lägen
   \end{tabular}
 \end{center}
 
-Totalt finns det alltså $M^N$ möjliga sätt att ställa in de $N$ skivorna, och låset öppnas ifall någon kolumn bara består av "\texttt{.}" 
-när man skriver ut alla skivornas strängar ovanför varandra. Skriv ett program som beräknar hur många sätt det finns att ställa in skivorna så att låset öppnas.
+Totalt finns det alltså $M^N$ möjliga sätt att ställa in de $N$ skivorna, och låset öppnas ifall någon kolumn bara består av ``\texttt{.}'' 
+när man skriver ut alla skivornas strängar ovanför varandra. Skriv ett program som beräknar hur många olika sätt det finns att ställa in skivorna så att låset öppnas.
 
 \section*{Indata}
 Ditt program ska först läsa in två heltal: $N$ ($1\le N \le 12$)  -- antal skivor och $M$ ($1\le M \le 12$) -- antal segment.
@@ -35,12 +35,18 @@ Varje skiva beskrivs av en rad med $M$ tecken bestående av "\texttt{.}" och "\t
 Ditt program ska skriva ut ett heltal: antalet sätt man kan ställa in skivorna så att låset öppnas.
 
 \section*{Poängsättning}
-%För 1 poäng gäller det att varje skiva har exakt ett segment med hål i. \\
-%För minst 2 poäng gäller det att $M,N \le 5$.
-%För de sista 2 poängen gäller det att $M,N \le 12$.
-För 2 poäng gäller det att $M,N \le 5$. \\
-För ytterligare 1 poäng gäller det att $N \le 8, M\le 10$ och att det finns max 3 hål i varje skiva. \\
-För de sista 2 poängen gäller det att $M,N \le 12$.
+Din lösning kommer att testas på fem olika testfall.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Fall & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  $M, N \le 5$ \\ \hline 
+  $2$    & $20$        &  $M, N \le 5$ \\ \hline 
+  $3$    & $20$        &  $N \le 8, M \le 10$, och det finns max 3 hål i varje skiva \\ \hline 
+  $4$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+  $5$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
 
 \section*{Förklaring av exempel}
 
@@ -66,6 +72,3 @@ I det tredje exempelfallet öppnar följande två inställningar låset:
     "\texttt{\#}" i den första skivan.
 
 \end{itemize}
-
-\section*{Exempelfall}
-

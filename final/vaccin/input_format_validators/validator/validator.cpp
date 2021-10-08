@@ -7,19 +7,19 @@ void run() {
 	if (max_n == -1) max_n = 100000;
 	int max_k  = Arg("max_k");
 	if (max_k == -1) max_k = 100000;
-	int n = Int(1, 100000);
+	int n = Int(1, max_n);
 	Space();
-	int k = Int(1, 100000);
+	int k = Int(1, max_k);
 	Endl();
 
 	for (int j = 0; j < n; j++) {
 		int a = Int(0, 15);
-		Space();
+		if(j != n-1) Space();
 	}
 	Endl();
 	for (int j = 0; j < k; j++) {
 		int a = Int(0, 1000000);
-		Space();
+		if(j != k-1) Space();
 	}
 	Endl();
 }
