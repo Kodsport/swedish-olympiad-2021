@@ -1,9 +1,8 @@
 \problemname{Meeting place}
-
 $N$ friends live on each vertex in a tree with $N$ vertices, where $N$ is an \textbf{odd} number.
 A \emph{tree} is a connected graph with exactly $N-1$ edges.
 
-The friends want to meet on one vertex in the tree.
+The friends want to meet at one vertex in the tree.
 They have agreed that the best meeting place is the vertex that minimizes
 the sum of distances to the friends, and have asked you to help them find 
 this optimal meeting place.
@@ -48,7 +47,6 @@ Then you can make the following queries:
     After you have printed this query your program should terminate without outputting anything more. 
     If $x$ is the vertex that minimizes $\sum_{i=1}^{n} \text{dist}(x,i)$ you will get \textit{Accepted} on the test case, otherwise you will get \textit{Wrong Answer}.
 \end{itemize}
-
 If you make more than $Q$ queries (including the last on the form ``\verb|! x|'')
 your program will be terminated and you will get \textit{Wrong Answer}.
 
@@ -67,14 +65,10 @@ To get points for a group, you must pass all test cases in the group.
 \begin{tabular}{| l | l | l |}
   \hline
   Group & Points & Constraints \\ \hline
-  $1$   & $10$        & $3 \le N\le 99$ and all vertices have degree at most 2, (the tree is a line) \\ \hline
-  $2$   & $12$        & $3 \le N\le 999$ and all vertices have degree at most 2, (the tree is a line) \\ \hline
-  $3$   & $21$        & $3 \le N\le 24\,999$ and all vertices have degree at most 2, (the tree is a line) \\ \hline \hline
+  $1$   & $10$        & $3 \le N\le 99$ and all vertices have degree at most 2 (the tree is a line) \\ \hline
+  $2$   & $12$        & $3 \le N\le 999$ and all vertices have degree at most 2 (the tree is a line) \\ \hline
+  $3$   & $21$        & $3 \le N\le 24\,999$ and all vertices have degree at most 2 (the tree is a line) \\ \hline \hline
   $4$   & $14$        & $3 \le N\le 99$ \\ \hline
   $5$   & $15$        & $3 \le N\le 999$ \\ \hline
   $6$   & $28$        & $3 \le N\le 24\,999$ \\ \hline
 \end{tabular}
-
-\section*{Sample}
-
-%TODO picture
