@@ -15,7 +15,7 @@ void run() {
 	Space();
 	int w = Int(1, 1000);
 	Endl();
-	assert(n*b >= 1 && n*b <= 100000);
+	assert(n*b >= 1 && n*b <= 200000);
 
 	seen.resize(n);
 	e.resize(n);
