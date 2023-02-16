@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
     try {
 		long double sc = score(cin, N,T,t,v,a, die);
 		long double bestsc = score(fans, N,T,t,v,a, judge_error);
-		long double ratio = sc / bestsc;
+		long double ratio = min(1.0L, sc / bestsc);
 		if (C == 0) accept(0);
 		else accept(10.0 * ratio*ratio*ratio);
     } catch(...) {

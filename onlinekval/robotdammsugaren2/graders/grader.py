@@ -13,4 +13,4 @@ if total_score > 0:
     verdict = "AC"
 else:
     verdict = verdicts[0]
-print "%s %f" % (verdict, total_score)
+print("%s %f" % (verdict, total_score))
