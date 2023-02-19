@@ -12,24 +12,23 @@ Då kan han återigen använda den för att paddla $K$ meter. Lav kan använda t
 Skriv ett program som beräknar det minsta antalet paddlar häxan behöver ge Lav så att han kan klara uppdraget.
 
 \section*{Indata}
-På den första raden står tre heltal: $1 \le N \le 20$ -- antalet öar, $1 \le K \le 15$ -- antalet meter du kan paddla med en paddel innan den brinner upp och $1 \le H \le 10^{12}$ -- antal meter en häxameter motsvarar.
-På den andra raden står $N-1$ heltal $1 \le d_1, d_2, \dots, d_{n-1} \le 1000$, avstånden mellan intilliggande öar i raden.
+Den första raden innehåller tre heltal: $N, K, H$ ($1 \leq N \leq 20, 1 \leq K \leq 15, 1 \leq H \leq 10^{12}$), antalet öar, antalet meter du kan paddla med en paddel innan den brinner upp och antal meter en häxameter motsvarar.
+Den andra raden innehåller $N-1$ heltal $d_i$ ($1 \leq d_i \leq 1000$), avstånden mellan intilliggande öar i raden.
 
 \section*{Utdata}
-Programmet ska skriva ut ett heltal: det minsta antalet paddlar häxan behöver ge Lav så att han kan klara av uppdraget.
+Skriv ut ett heltal: det minsta antalet paddlar häxan behöver ge Lav så att han kan klara av uppdraget.
 
 \section*{Poängsättning}
-Din lösning kommer att testas på fem olika testfall.
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
 \begin{tabular}{| l | l | l |}
   \hline
-  Fall & Poängvärde & Gränser \\ \hline
-  $1$    & $20$        &  $K = 1, H \le 100$ \\ \hline 
-  $2$    & $20$        &  $H = 1$ \\ \hline 
-  $3$    & $20$        &  $H = 1$ \\ \hline 
-  $4$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
-  $5$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  $ K \eq 1, H \leq 100 $ \\ \hline 
+  $2$    & $40$        &  $ H \eq 1 $ \\ \hline
+  $3$    & $40$        &  Inga ytterligare begränsningar \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempel}
