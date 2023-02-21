@@ -3,11 +3,11 @@
 typedef long long ll;
 
 void run() {
-  int n = Int(1, 20);
+  ll n = Int(1, 20);
   Space();
-  int k = Int(1, 15);
+  ll k  = Int(1, Arg("max_k", 15));
   Space();
-  long long h = Int(1, 1000000000000ll);
+  ll h  = Int(1, Arg("max_h", 1000000000000));
   Endl();
   SpacedInts(n-1,1,1000);
   Eof();

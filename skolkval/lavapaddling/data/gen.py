@@ -1,6 +1,22 @@
+#!/usr/bin/python3
+
+import sys
 import random
 
-n,k,h = list(map(int,input().split()))
+def cmdlinearg(name, default=None):
+    for arg in sys.argv:
+        if arg.startswith(name + "="):
+            return arg.split("=")[1]
+    if default is None:
+        print("missing parameter", name)
+        sys.exit(1)
+    return default
+
+random.seed(int(cmdlinearg('seed', sys.argv[-1])))
+n = int(cmdlinearg("n"))
+k = int(cmdlinearg("k"))
+h = int(cmdlinearg("h"))
+
 
 d = [0]*(n-1)
 
@@ -12,7 +28,11 @@ for i in range(n-2,-1,-1):
         d[i] = random.randint(0,((ans-1)*(k-1)+h-1)//h+10)
     
     ans = max(ans,(d[i]*h+ans+k-1)//k)
+
     assert(d[i]<1000)
+
+for i in range(len(d)):
+    d[i]=max(1,d[i])
 
 assert(ans<2e17)
 
