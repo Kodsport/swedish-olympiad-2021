@@ -35,11 +35,11 @@ tc small4 gen n=178 mode="largeans"
 
 group g3 20
 include_group g2
-limits max_n=2000
-tc medium1 gen n=2000
-tc medium2 gen n=1598 
-tc medium3 gen n=2000 mode="largeans"
-tc medium4 gen n=1598 mode="largeans"
+limits max_n=5000
+tc medium1 gen n=5000
+tc medium2 gen n=4598 
+tc medium3 gen n=5000 mode="largeans"
+tc medium4 gen n=4598 mode="largeans"
 
 group g4 40
 include_group g3

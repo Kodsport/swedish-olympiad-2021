@@ -12,6 +12,6 @@ def energy(p):
 
 n = int(input())
 ans = 0
-for a in xrange(24*60*60):
+for a in range(24*60*60):
     if(energy(a) == n): ans+=1
 print(ans)

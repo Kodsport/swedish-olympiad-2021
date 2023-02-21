@@ -12,10 +12,10 @@ def energy(p):
 
 n = int(input())
 ans = 0
-for a in xrange(24*60*60):
-    for b in xrange(a, 24*60*60):
+for a in range(24*60*60):
+    for b in range(a, 24*60*60):
         s = 0
-        for c in xrange(a, b+1):
+        for c in range(a, b+1):
             s += energy(c)
         if(s == n): ans += 1
         if(s > n): break
