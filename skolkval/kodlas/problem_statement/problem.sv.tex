@@ -26,21 +26,22 @@ Totalt finns det alltså $M^N$ möjliga sätt att ställa in de $N$ skivorna, oc
 när man skriver ut alla skivornas strängar ovanför varandra. Skriv ett program som beräknar hur många olika sätt det finns att ställa in skivorna så att låset öppnas.
 
 \section*{Indata}
-Ditt program ska först läsa in två heltal: $N$ ($1\le N \le 12$)  -- antal skivor och $M$ ($1\le M \le 12$) -- antal segment.
+Första raden innehåller heltal $N, M$ ($1\le N, M \le 12$), antalet skivor och antalet segment.
 
-Därefter ska ditt program läsa in beskrivningar av de $N$ skivorna.
-Varje skiva beskrivs av en rad med $M$ tecken bestående av "\texttt{.}" och "\texttt{\#}".
+Därefter följer $N$ rader som vardera beskriver en av skivorna.
+Varje skiva beskrivs av $M$ tecken bestående av "\texttt{.}" och "\texttt{\#}".
 
 \section*{Utdata}
-Ditt program ska skriva ut ett heltal: antalet sätt man kan ställa in skivorna så att låset öppnas.
+Skriv ut ett heltal: antalet sätt man kan ställa in skivorna så att låset öppnas.
 
 \section*{Poängsättning}
-Din lösning kommer att testas på fem olika testfall.
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
 \begin{tabular}{| l | l | l |}
   \hline
-  Fall & Poängvärde & Gränser \\ \hline
+  Grupp & Poängvärde & Gränser \\ \hline
   $1$    & $20$        &  $M, N \le 5$ \\ \hline 
   $2$    & $20$        &  $M, N \le 5$ \\ \hline 
   $3$    & $20$        &  $N \le 8, M \le 10$, och det finns max 3 hål i varje skiva \\ \hline 

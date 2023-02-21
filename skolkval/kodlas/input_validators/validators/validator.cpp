@@ -7,9 +7,9 @@ void run() {
   int max_m  = Arg("max_m", int(12));
   int max_dots_per_row = Arg("max_dots_per_row", int(12));
 
-  int n = Int(2, max_n);
+  int n = Int(1, max_n);
   Space();
-  int m = Int(0, max_m);
+  int m = Int(1, max_m);
   Endl();
   for(int i = 0; i < n; ++i) {
     int dots = 0;
