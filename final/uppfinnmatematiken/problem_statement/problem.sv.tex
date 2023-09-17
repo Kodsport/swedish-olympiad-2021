@@ -1,4 +1,4 @@
-  \problemname{Återuppfinnande av matematiken}
+\problemname{Återuppfinnande av matematiken}
 
 Ånej, all matematik har gått upp i rök! Hur gick det här till? Du hinner inte fundera över saken, 
 utan inser att du måste återuppfinna så mycket matematik som möjligt innan världen går under!
@@ -15,7 +15,7 @@ Den andra raden innehåller två heltal: $N$ ($1 \le N \le 10^5$) och $T$ ($1 \l
 
 Därefter följer $N$ beskrivningar av satser.
 En beskrivning av en sats består av två rader. Först kommer en rad med tre heltal: $0 \le t_i \le 10^4$, $0 \le v_i \le 10^4$, $0 \le k_i \le N$. 
-Därefter kommer en rad med $k_i$ heltal: $a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$ -- indexen på satserna som måste bevisas innan den här satsen.
+Därefter kommer en rad med $k_i$ heltal: $a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$, indexen på satserna som måste bevisas innan den här satsen.
 Satserna är indexerade från 0 i ordningen de kommer i input.
 
 \section*{Utdata}
@@ -24,13 +24,11 @@ Skriv först ut en rad med ett tal $S$ ($0 \le S \le N$), antal satser du ska be
 \section*{Poängsättning}
 Ditt program kommer att testas på $10$ testfall, och poängsättas baserat på hur det står sig relativt domarnas lösning.
 Om din inskickning på ett givet testfall uppnår ett totalt värde av satser $X$, och totala värdet domarna uppnått på det testfallet är $Y$,
-så blir din poäng på det testfallet $10 \cdot (X / Y)^3$, avrundat till två decimaler.
+så blir din poäng på det testfallet $min(10, 10 \cdot (X / Y)^3)$, avrundat till två decimaler.
 
 Din poäng för en inskickning är summan av poängen för testfallen, och din totala poäng är poängen för den bästa inskickningen.
 Det går alltså inte att kombinera testfall mellan olika inskickningar, utan du måste skicka in ett enda program som
 maximerar din poäng på alla testfall samtidigt.
-
-Din lösning kan maximalt få $100$ poäng, även om den är bättre än den domarna skrivit.
 
 Exempeltestfallet kommer alltid att ge $0$ poäng.
 
