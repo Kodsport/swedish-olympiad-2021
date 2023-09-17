@@ -35,7 +35,7 @@ int solve(int n){
 
 void run() {
     int max_n  = Arg("max_n");
-    if(max_n == -1) max_n = 1e9;
+    if(max_n == -1) max_n = 3e6;
     int n = Int(1, max_n);
     assert(solve(n) != 0);
     Endl();

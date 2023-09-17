@@ -1,17 +1,25 @@
 \problemname{Klockan}
-Timla åkte hemifrån vid midnatt och kom hem nästa midnatt, 24 timmar senare. Då hade det varit inbrott i huset! 
-I huset har Timla en digital klocka som visar tiden i 24-timmarsformat med timmar, minuter och sekunder, alltid sex siffror. Timla gillar att spara el, så hennes klocka stänger av sig automatiskt när ingen är i huset. För att kunna mäta exakt hur mycket el hon sparar har hon också en mycket exakt elmätare. Enligt denna mätare förbrukade klockan $N$ energienheter under dygnet då hon var bortrest. Varje siffersegment i klockan drar en energienhet för varje sekund som det siffersegmentet lyser. Siffrorna ser ut som på bilden. Exempelvis lyser 27 siffersegment då klockan är 02:41:35.
+Timla åkte hemifrån vid midnatt och kom hem nästa midnatt, $24$ timmar senare. Då hade det varit inbrott i huset! 
+I huset har Timla en digital klocka som visar tiden i $24$-timmarsformat med timmar, minuter och sekunder,
+alltid sex siffror. Timla gillar att spara el, så hennes klocka stänger av sig automatiskt när ingen är i huset.
+För att kunna mäta exakt hur mycket el hon sparar har hon också en mycket exakt elmätare.
+Enligt denna mätare förbrukade klockan $N$ energienheter under dygnet då hon var bortrest.
+Varje siffersegment i klockan drar en energienhet för varje sekund som det siffersegmentet lyser.
+Siffrorna ser ut som på bilden. Exempelvis lyser $27$ siffersegment då klockan är \texttt{02:41:35}.
 
 \begin{center}
   \includegraphics[width=12cm]{illustration.png}
 \end{center}
 
-Timla vill hjälpa polisen genom att ta reda på vilken tid tjuven kan ha brutit sig in i huset. Man kan se på skoavtrycken att tjuven gick in i huset en gång och ut en gång, så klockan kan inte ha tänts och släckts flera gånger. Klockans display tänds och släcks alltid vid en hel sekund och kan som tidigast ha tänts 00:00:00 och kan som senast ha slocknat efter att ha visat 23:59:59.
+Timla vill hjälpa polisen genom att ta reda på vilken tid tjuven kan ha brutit sig in i huset.
+Man kan se på skoavtrycken att tjuven gick in i huset en gång och ut en gång, så klockan kan inte
+ha tänts och släckts flera gånger. Klockans display tänds och släcks alltid vid en hel sekund och
+kan som tidigast ha tänts \texttt{00:00:00} och kan som senast ha slocknat efter att ha visat \texttt{23:59:59}.
 
 Skriv ett program som beräknar antalet möjliga klockslag då displayen kan ha tänts. 
 
 \section*{Indata}
-Den första och enda raden innehåller ett heltal $N$. Det finns minst ett tidsintervall under dygnet där klockan förbrukat exakt $N$ energienheter.
+Den första och enda raden innehåller ett heltal $N$ ($1 \leq N \leq 3 \cdot 10^6$). Det finns minst ett tidsintervall under dygnet där klockan förbrukat exakt $N$ energienheter.
 
 \section*{Utdata}
 Skriv ut ett heltal: antalet olika klockslag då klockans display kan ha tänts. 
