@@ -1,0 +1,54 @@
+\problemname{Tramway}
+\noindent
+The public transportation system in Stackköping consists of a \textit{tramway} using $N$ stations and $M$ lines.
+Each line consists of an ordered sequence of stations where it is possible to travel in both directions.
+A \textit{journey} on the tramway is a movement between two stations on the same line.
+For example, if the line consists of the stations $(3,7,5,2,1,9)$, a journey from $1$ to $5$
+will pass through stations $1$, $2$, and $5$.
+
+A common health issue in Stackköping is that people take short trips on the tramway instead
+of walking. To counteract this, the municipality has decided to switch to a new payment system
+where the price for a journey is proportional to the \textit{waste}. The waste for a journey
+is defined as the number of stations on the line that the tramway does not pass through. In the example above,
+the waste is $3$, because stations $3,7,$ and $9$ are not passed through.
+
+You want to travel from station $1$ to station $N$ through a sequence of journeys.
+What is the minimum possible total waste?
+It is guaranteed that it is possible to reach all stations from station $1$.
+
+\section*{Input}
+The first line of input contains two integers $N$ and $L$ ($2 \leq N,L \leq 10^5$),
+the number of stations and the number of lines in the tramway network.
+
+The following $L$ lines each describe a tramway line. Each of these lines begin with an
+integer $M$ ($2 \le M \le N$) followed by $M$ integers between $1$ and $N$, the number of
+stations on the tramway line and its stations. These $M$ integers are all distinct.
+
+Let $S$ be the sum of $M$ över all tramway lines. It is guaranteed that $S \leq 3 \cdot 10^5$.
+
+\section*{Output}
+Print an integer: the smallest possible total waste required to travel from station $1$ to
+station $N$.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $10$        &  $N,\le 100, S \le 200$ \\ \hline
+  $2$    & $10$        &  $N,\le 2000, S \le 4000$ \\ \hline
+  $3$    & $10$        &  $M \le 100, S \le 30000$ \\ \hline
+  $4$    & $15$        &  $L=1$ \\ \hline 
+  $5$    & $55$        &  No further constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Samples}
+In the first sample, we first travel from $1$ to $2$ using the first line. We can then travel from
+$2$ to $6$ using the second line. The total waste for the trips is $1$ and $2$, therefore the answer is $3$.
+
+In the second sample we can start by travelling from $1$ to $4$, with waste $1$. Afterwards, we travel from
+$4$ to $5$, which has a waste of $0$ as all stations along the line are visited.
