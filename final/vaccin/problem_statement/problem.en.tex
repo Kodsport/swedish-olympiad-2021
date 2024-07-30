@@ -1,0 +1,35 @@
+\problemname{Vaccines}
+
+Fredrika and her friends are eagerly waiting for their COVID-19 vaccine. They are so anxious to
+know when they will get their vaccine that they have obtained classified information from the
+government about the vaccination process. Specifically, they know that there are $p_i$ people
+ahead of friend $i$ in the queue, and they know how many people get vaccinated each day. Help
+them calculate when Fredrika and each of her friends will be vaccinated.
+
+
+\section*{Input}
+The first line contains two integers $N$ and $Q$ ($1 \leq N, Q \leq 10^5$), the number of days
+where they know how many people get vaccinated, and the number of friends, including Fredrika,
+who want to know when they will get their vaccine.
+
+The next line contains $N$ integers $0 \leq k_j \leq 15$, the number of people who get vaccinated on day $j$ ($1 \leq j \leq N$).
+
+Then follows a line with $Q$ integers $0 \leq p_i \leq 10^6$, the number of people ahead of friend $i$ in the queue.
+
+\section*{Output}
+For each of the $Q$ people, print a line with the day when they will be vaccinated. 
+If someone is so far back in the queue that you don't know when they will be vaccinated, print $-1$.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $50$      & $Q=1$, $N \le 100$ \\ \hline
+  $2$    & $50$      & No additional constraints. \\ \hline
+\end{tabular}
+
+%\section*{Samples}

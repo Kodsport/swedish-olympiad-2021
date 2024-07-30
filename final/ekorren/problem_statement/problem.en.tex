@@ -1,0 +1,38 @@
+\problemname{Squirrel In A Tree}
+
+A squirrel lives in a tree with $N$ nodes and $N-1$ edges.
+Each edge has a length of 1 and connects two nodes.
+In some of the nodes, the squirrel has hidden nuts, which he now wants to collect.
+If the squirrel starts at node $1$ (the root of the tree),
+what is the shortest distance he needs to travel to collect all the nuts and return to node $1$?
+The squirrel can carry multiple nuts at the same time.
+
+It is guaranteed that it is possible to travel between all pairs of nodes via a sequence of edges.
+
+
+\section*{Input}
+The first line contains two integers $N$ and $K$ ($1 \leq K \leq N \leq 10^5$), the number of nodes
+in the tree and the number of nodes with nuts.
+
+The second line contains $K$ unique integers -- the nodes where the squirrel has hidden nuts. The nodes are indexed from 1 to $N$.
+
+Then follow $N-1$ lines. Each line contains two integers $a,b$ ($1 \leq a, b \leq N$) which means that there
+is an edge between node $a$ and node $b$.
+
+\section*{Output}
+Print an integer: the shortest distance the squirrel needs to travel to collect all its nuts.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  The $i$:th edge connects node $i$ and $i+1$ for all $1\le i \le N-1$ \\ \hline 
+  $2$    & $40$        &  $1 \le K \le N \le 1000$ \\ \hline
+  $3$    & $40$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+%\section*{Samples}

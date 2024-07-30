@@ -1,0 +1,45 @@
+\problemname{Drone Flying}
+
+You have just gotten a new battery-powered drone, but you lack batteries.
+In the store, there are $N$ batteries available for the drone,
+each with an energy $e_i$, weight $w_i$, and cost $c_i$.
+The store has only one of each battery.
+
+To have as much fun as possible with the drone, you obviously want it to
+fly as long as possible on a full charge.
+The time the drone can stay in the air is given by the expression $t = \frac{E_{tot}}{W_{tot}}$ where $E_{tot}$
+is the total energy content of all the drone's batteries, and $W_{tot}$ is the combined weight of the drone and the batteries.
+
+Given a budget $B$ and the weight of the drone itself $W$, determine
+the maximum time the drone can fly.
+
+
+\section*{Input}
+The first line contains three integers $N$, $B$, and $W$ ($1 \leq N \times B \leq 200,000$ and $1 \leq W \leq 1000$),
+the number of available batteries, your budget, and the weight of the drone.
+
+The following $N$ lines each contain three integers. Line number $i$ contains $e_i$,
+$w_i$, and $c_i$ ($0 \leq e_i \leq 1000$, $0 \leq w_i \leq 1000$, $0 \leq c_i \leq B$), 
+the energy, weight, and cost of battery $i$.
+
+\section*{Output}
+Print a decimal number: The longest time you can fly your drone if you choose the batteries optimally.
+The answer will be accepted if it has a relative or absolute error of at most $10^{-5}$.
+That is, if your answer is $a$ and the correct answer is $b$, your answer will be accepted if
+either $|a-b| \leq 10^{-5}$ or $\frac{|a-b|}{|b|} \leq 10^{-5}$.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$   & $10$       & $N \leq 20$ \\ \hline
+  $2$   & $20$       & $w_i = 0$ \\ \hline
+  $3$   & $20$       & $c_1 = c_2 = \dots = c_N$ \\ \hline
+  $4$   & $50$       & No additional constraints. \\ \hline
+\end{tabular}
+
+%\section*{Samples}

@@ -13,16 +13,16 @@ Den första raden innehåller tre heltal $R$, $C$ och $K$
 
 Därefter följer $R$ rader, vardera med $C$ tecken, som beskriver minigolfbanan:
 \begin{itemize}
-  \item ``\verb!.!'' betyder att rutan är tom.
-  \item ``\verb!#!'' betyder att rutan har en vägg i sig.
-  \item ``\verb!S!'' betyder att denna rutan är den du startar från. Det kommer finnas exakt ett ``\verb!S!'' i indatan.
-  \item ``\verb!G!'' betyder att denna rutan är den med hålet i. Det kommer finnas exakt ett ``\verb!G!'' i indatan.
+  \item ”\verb!.!” betyder att rutan är tom.
+  \item ”\verb!#!” betyder att rutan har en vägg i sig.
+  \item ”\verb!S!” betyder att denna rutan är den du startar från. Det kommer finnas exakt ett ”\verb!S!” i indatan.
+  \item ”\verb!G!” betyder att denna rutan är den med hålet i. Det kommer finnas exakt ett ”\verb!G!” i indatan.
 \end{itemize}
 
 Det är garanterat att det är möjligt att nå hålet från startrutan.
 
 \section*{Utdata}
-Skriv ut ett heltal -- det minsta antalet puttar du behöver för att skjuta bollen i hålet.
+Skriv ut ett heltal: det minsta antalet puttar du behöver för att skjuta bollen i hålet.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper.
@@ -31,12 +31,11 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \noindent
 \begin{tabular}{| l | l | l |}
   \hline
-  Grupp & Poängvärde & Gränser \\ \hline
-  $1$   & $8$        & Det finns inga väggar (``\verb!#!'') i indatan \\ \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$   & $8$        & Det finns inga väggar (”\verb!#!”) i indatan. \\ \hline
   $2$   & $18$       & $R = 2$ \\ \hline
   $3$   & $22$       & $1\le R,C,K\le 100$ \\ \hline
-  $4$   & $25$       & $K \ge \text{max}(R,C)$, dvs du är inte begränsad av hur långt du kan putta \\ \hline
-  $5$   & $27$       & Inga ytterligare begränsningar \\ \hline
+  $4$   & $25$       & $K \ge \text{max}(R,C)$, dvs du är inte begränsad av hur långt du kan putta. \\ \hline
+  $5$   & $27$       & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
-Notera att vissa exemplelfall är inte giltiga i vissa testfallsgrupper.

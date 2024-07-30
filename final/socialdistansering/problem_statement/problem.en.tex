@@ -1,0 +1,47 @@
+\problemname{Social Distancing}
+
+In a school, there are $N$ students who need to eat lunch in the school cafeteria every day.
+Just before the cafeteria opens, all the students line up outside.
+There are $K$ queue spots in total, numbered from $0$ to $K-1$.
+At most one person can stand at each queue spot.
+Some queue spots must be empty due to fire safety regulations.
+Specifically, there are $M$ intervals of queue spots that must be empty --
+the interval $l_i, r_i$ indicates that no one is allowed to stand on any of the spots $l_i, l_i+1, \ldots, r_i$.
+It is guaranteed that no interval overlaps with any other.
+
+The school principal has just heard about some kind of ”pandemic” and decides that it is time for drastic measures.
+The principal wants to introduce social distancing in the lunch line.
+He plans to choose an integer $D$, and then declare that each student must maintain at least a distance of $D$
+from the nearest other student.
+A student at queue spot $i$ and a student at queue spot $j$ have a distance $|i-j|$.
+
+Help the principal find the largest $D$ he can choose so that all students can still stand in the lunch line at the same time!
+
+
+\section*{Input}
+The first line contains three integers $N$, $M$, and $K$ ($2 \leq N \leq 10^9$, $0 \leq M \leq 10^5$, and $N \leq K \leq 10^{12}$),
+the number of students, the number of forbidden intervals, and the number of queue spots.
+
+Then follow $M$ lines each with $2$ integers, $l_i$, $r_i$ ($0 \leq l_i \leq r_i \leq K-1$), the start and end of interval number $i$.
+It is guaranteed that no pair of these intervals overlap, and that there are at least $N$ queue spots that are not forbidden.
+
+\section*{Output}
+Print an integer: the largest possible social distance.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $11$      &  $M = 0, N \leq 10^6$ \\ \hline
+  $2$    & $10$      &  $N \cdot K \cdot M \leq 10^6$ \\ \hline
+  $3$    & $15$      &  $N, M \leq 1000, N \leq K \leq 2000$ \\ \hline
+  $4$    & $19$      &  $N \cdot M \leq 10^7$ \\ \hline
+  $5$    & $21$      &  $N \leq 10^6 $ \\ \hline
+  $6$    & $24$      &  No additional constraints. \\ \hline
+\end{tabular}
+
+%\section*{Samples}

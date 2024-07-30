@@ -1,0 +1,42 @@
+\problemname{Mini-golf}
+
+You are playing mini-golf on an $R \times C$ grid.
+With one stroke, you can putt the golf ball any number of steps up to $K$ straight in one of the four directions:
+up, down, right, or left. Of course, you cannot putt the ball through a wall or outside the course.
+
+Your task is to calculate the minimum number of putts needed to get the ball into the hole.
+
+
+\section*{Input}
+The first line contains three integers $R$, $C$, and $K$ ($1 \leq R \times C \leq 10^6$, $1 \leq K \leq 10^6$), the number of rows,
+the number of columns, and the maximum distance you can putt.
+
+The following $R$ lines each contain a string with $C$ characters, describing the mini-golf course:
+\begin{itemize}
+  \item ”\verb!.!” means the cell is empty.
+  \item ”\verb!#!” means the cell has a wall in it.
+  \item ”\verb!S!” means this cell is your starting point. There will be exactly one ”\verb!S!” in the input.
+  \item ”\verb!G!” means this cell has the hole. There will be exactly one ”\verb!G!” in the input.
+\end{itemize}
+
+It is guaranteed that it is possible to reach the hole from the starting cell.
+
+\section*{Output}
+Print an integer: the smallest number of putts needed to shoot the ball into the hole.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$   & $8$        & There are no walls (”\verb!#!”) in the input. \\ \hline
+  $2$   & $18$       & $R = 2$ \\ \hline
+  $3$   & $22$       & $1\le R,C,K\le 100$ \\ \hline
+  $4$   & $25$       & $K \ge \text{max}(R,C)$, in other words, you are not limited by how long you can putt. \\ \hline
+  $5$   & $27$       & No additional constraints. \\ \hline
+\end{tabular}
+
+%\section*{Samples}

@@ -9,7 +9,7 @@ Närmare bestämt finns det $M$ intervall av köplatser som måste vara tomma --
 intervallet $l_i,r_i$ indikerar att man inte får stå på någon av köplatserna $l_i,l_i+1,...r_i$.
 Det garanteras att inget intervall överlappar med något annat.
 
-Skolans rektor har just fått höra om nån slags "pandemi", och bestämmer att det är dags för drastiska åtgärder.
+Skolans rektor har just fått höra om nån slags ”pandemi”, och bestämmer att det är dags för drastiska åtgärder.
 Rektorn vill införa social distansering i lunchkön.
 Han tänker välja ett heltal $D$, och sedan säga att varje elev måste minst hålla ett avstånd $D$ från närmsta andra elev.
 En elev på köplats $i$ och en elev på köplats $j$ har avstånd $|i-j|$.
@@ -20,11 +20,13 @@ Hjälp rektorn hitta det största $D$ han kan välja så att alla elever fortfar
 \section*{Indata}
 Den första raden innehåller tre heltal $N$, $M$ och $K$ ($2 \leq N \leq 10^9$, $0 \leq M \leq 10^5$ och $N \leq K \leq 10^{12}$) --
 antal elever, antal förbjudna intervall och antal köplatser.
+
 Därefter följer $M$ rader med $2$ heltal på varje, $l_i$, $r_i$  ($0 \le l_i \le r_i \le K-1$) start och slut för intervall nummer $i$.
 Det garanteras att inget par av dessa intervall överlappar, och att det finns minst $N$ köplatser som inte är förbjudna.
 
 \section*{Utdata}
-Skriv ut ett heltal -- den största möjliga sociala distanseringen. 
+Skriv ut ett heltal -- den största möjliga sociala distanseringen.
+
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper.
 För att få poäng för en grupp så måste du klara alla testfall i gruppen.
@@ -32,11 +34,11 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \noindent
 \begin{tabular}{| l | l | l |}
   \hline
-  Grupp & Poängvärde & Gränser \\ \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
   $1$    & $11$      &  $M = 0, N \leq 10^6$ \\ \hline
   $2$    & $10$      &  $N \cdot K \cdot M \leq 10^6$ \\ \hline
   $3$    & $15$      &  $N, M \leq 1000, N \leq K \leq 2000$ \\ \hline
   $4$    & $19$      &  $N \cdot M \leq 10^7$ \\ \hline
   $5$    & $21$      &  $N \leq 10^6 $ \\ \hline
-  $6$    & $24$      &  Inga ytterligare begränsningar \\ \hline
+  $6$    & $24$      &  Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
