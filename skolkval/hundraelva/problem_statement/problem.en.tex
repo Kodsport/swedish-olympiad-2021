@@ -1,0 +1,41 @@
+\problemname{One Hundred and Eleven Kronor}
+
+At Tumba paper mill --- which is responsible for producing banknotes --- the printing press has broken down:
+it can now only print the digit ”\texttt{1}”.
+Buying a new printing press costs $N$ Swedish kronor, but unfortunately, the paper mill has completely run out of money.
+However, since they themselves print banknotes, why not print new money so they can buy the new machine?
+
+Because the broken printing press can only print the digit ”\texttt{1}”, they can only print banknotes with
+the denominations of $1$ krona, $11$ kronor, $111$ kronor, $1111$ kronor, and so on.
+
+The paper mill now wonders how many banknotes they need to print to be able to pay for the new printing press.
+They want to be able to pay with exact money, i.e., exactly $N$ kronor (it is immoral to print more money than they need),
+and therefore they want to print as few banknotes as possible.
+Write a program that calculates the number of banknotes they must print.
+
+\section*{Input}
+The first and only line contains an integer $N$ ($1 \leq N \leq 10^9$), the cost in kronor for the new printing press.
+
+\section*{Output}
+Print an integer: the minimum number of banknotes that need to be printed.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $ N \leq 1000 $ \\ \hline 
+  $2$    & $40$        &  $ N \leq 10^6 $ \\ \hline
+  $3$    & $40$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+
+
+\section*{Explanation of samples}
+\begin{itemize}
+  \item In the first example case, one can use one $1$-krona banknote and two $11$-kronor banknotes.
+  \item In the second example case, one can use one of each $1$-, $11$-, $111$-, $1111$-, and $11111$-krona banknote.
+\end{itemize}

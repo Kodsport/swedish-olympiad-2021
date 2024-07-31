@@ -1,0 +1,36 @@
+\problemname{Personal Identification Number}
+
+Swedish personal identification numbers are usually written with ten digits in the format \texttt{YYMMDD-XXXX}.
+The first six digits constitute the person's birth date, so a person with the identification number \texttt{781113-3285}
+was, for example, born on November 13, 1978. A detail that many people do not know is that people over 100
+years old get a plus sign instead of a hyphen in their identification number. This is so that they are not
+confused with people born exactly 100 years later. For example, someone born in 1912 can have the identification number
+\texttt{121212+1212}, while \texttt{121212-1212} belongs to someone born in 2012.
+
+Write a program that reads an identification number in the format above,
+and prints it in \emph{twelve-digit} format, i.e., \texttt{YYYYMMDDXXXX}.
+You can assume that the people in the input were born between 1840 and 2019.
+For simplicity, there will also be no people born in 1920.
+
+
+\section*{Input}
+The first and only line contains a string consisting of digits, hyphens, and plus signs, in the format described above.
+
+\section*{Output}
+Print a string, the personal identification number from the input converted to twelve-digit format.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $50$      & The personal identification number never contains a plus-sign. \\ \hline
+  $2$    & $50$      & No additional constraints. \\ \hline
+\end{tabular}
+
+
+
+%\section*{Samples}

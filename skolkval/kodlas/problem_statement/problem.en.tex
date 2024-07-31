@@ -1,0 +1,81 @@
+\problemname{Combination Lock}
+
+Åskold has just bought a new combination lock.
+The seller promised that the lock is very secure, but Åskold is not convinced.
+Therefore, he wants you to calculate how many different combinations open the lock.
+
+The code lock consists of $N$ adjacent disks.
+Each disk has $M$ segments, where a segment is either filled or a hole.
+To enter a code, you turn the disks.
+Each disk can be set in $M$ different positions, as the mechanism does not allow you to turn the disk by less than a whole segment.
+The lock opens if there is at least one hole that goes through all the disks at the same place.
+
+We can describe each disk as a string consisting of ”\texttt{.}” and ”\texttt{\#}”,
+where ”\texttt{.}” represents a segment with a hole and ”\texttt{\#}” represents a filled segment.
+Rotating a disk one step can then be seen as taking the last character of the string and putting it at the beginning.
+If the disk is rotated $M$ steps, it returns to the position it started in.
+
+For example, the disk ”\texttt{.\#..\#}” can be set in the following 5 positions:
+
+
+\begin{center}
+  \begin{tabular}{c|c|c|c|c}
+	{\centering \texttt{.\#..\#}} &
+	{\centering \texttt{\#.\#..}} &
+	{\centering \texttt{.\#.\#.}} &
+	{\centering \texttt{..\#.\#}} &
+	{\centering \texttt{\#..\#.}}
+  \end{tabular}
+\end{center}
+
+In total, there are $M^N$ possible ways to set the $N$ disks, and the lock opens if any column consists solely
+of ”\texttt{.}” when you print all the strings of the disks on top of each other. Write a program that
+calculates how many different ways there are to set the disks so that the lock opens.
+
+\section*{Input}
+The first line contains integers $N, M$ ($1 \leq N, M \leq 12$), the number of disks and the number of segments.
+
+Then follow $N$ lines, each describing one of the disks.
+Each disk is described by $M$ characters consisting of ”\texttt{.}” and ”\texttt{\#}”.
+
+\section*{Output}
+Print an integer: the number of ways to set the disks so that the lock opens.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $40$        &  $M, N \le 5$ \\ \hline 
+  $2$    & $20$        &  $N \le 8, M \le 10$, and there are at most 3 holes in each disk. \\ \hline 
+  $3$    & $40$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+
+
+\section*{Explanation of samples}
+
+\begin{itemize}
+  \item In the first sample, all the nine possible configurations open the lock.
+  
+  \item In the second sample, no configuration will open the lock, as the second disk doesn't have any holes.
+  
+  \item In the third sample, the following two settings open the lock:
+
+\begin{center}
+  \begin{tabular}{c|c}
+    {\raggedleft \texttt{.\#~~}}& {\raggedright \texttt{~~\#.}}\\
+    {\raggedleft \texttt{.\#~~}}& {\raggedright \texttt{~~\#.}}\\
+    {\raggedleft \texttt{.\#~~}}& {\raggedright \texttt{~~\#.}}
+  \end{tabular}
+\end{center}
+
+  \item In the fourth sample, there are three (out of the nine possible) settings that \textbf{do not}
+  open the lock: when the ”\texttt{.}” in the second disk is directly under the ”\texttt{\#}” in the first disk.
+
+\end{itemize}
+
+

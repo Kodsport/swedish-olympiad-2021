@@ -1,0 +1,56 @@
+\problemname{Lava Kayaking}
+
+Lav has been captured by an evil witch in a volcano. In the vast lava sea of the volcano, there are $N$ islands in a long row.
+The distance between the $i$:th and the $(i+1)$:th island is $d_i$. The distances are given in the unit
+”witchameter,” which corresponds to exactly $H$ meters. The witch lives on the first island in the row,
+and this is where Lav is currently located.
+
+The witch has forgotten her book with all the spells on the last island in the row, and now forces Lav
+to go and fetch it. To help him, he has a lava boat and a number of paddles.
+Each paddle lasts for $K$ paddle strokes, where each stroke moves the boat forward one meter, before
+the paddle burns up due to the lava.
+Lav takes a number of paddles from the witch and does not need to completely use up one paddle before switching to another.
+
+Additionally, Lav has a spell from the witch that he can use when he is on an island. The spell repairs
+a paddle that he has paddled with a bit but hasn't completely burned up.
+He can then use it again to paddle $K$ meters. Lav can use the spell as many times as he wants when he is on an island.
+
+Write a program that calculates the minimum number of paddles the witch needs to give Lav so that he can complete the mission.
+
+
+\section*{Input}
+The first line contains the integers $N, K, H$ ($1 \leq N \leq 20, 1 \leq K \leq 15, 1 \leq H \leq 10^{12}$),
+the number of islands, the number of meters you can paddle with a paddle before it burns up, and the number of meters a witchameter corresponds to.
+
+The second line contains $N-1$ integers $d_i$ ($1 \leq d_i \leq 1000$), the distances between adjacent islands in the row.
+
+\section*{Output}
+Print an integer: the minimum number of paddles the witch needs to give Lav so that he can complete the mission.
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $ K = 1, H \leq 100 $ \\ \hline 
+  $2$    & $40$        &  $ H = 1 $ \\ \hline
+  $3$    & $40$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+
+
+\section*{Explanation of samples}
+In the first example, there are two islands, with a distance of $7$ witchameters, which corresponds to
+$7\cdot H = 7\cdot 10=70$ meters. With each paddle, he can take a maximum of $5$ paddle strokes, so
+$70/5 = 14$ paddles are required.
+
+In the second example, there are three islands, with $200$ meters between the first and the second, and
+$100$ meters between the second and the third. Each paddle can take $7$ paddle strokes. If Lav starts
+with $31$ paddles, uses $14$ of them fully, and takes $6$ paddle strokes with the remaining $17$ paddles,
+he will cover $14\cdot 7+6\cdot 17=200$ meters, enough to reach the second island. Then he has $17$ paddles
+left, which he repairs with the spell, enough to get from the second to the third island. It would not
+have been possible with fewer than $31$ paddles.
+

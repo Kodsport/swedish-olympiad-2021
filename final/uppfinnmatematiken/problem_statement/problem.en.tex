@@ -1,0 +1,62 @@
+\problemname{Reinventing Mathematics}
+
+Oh no, all mathematics has disappeared! How did this happen? You don't have time to ponder over it,
+instead you realize that you must reinvent as much mathematics as possible before the world ends!
+Although all actual knowledge has vanished, you know a little about mathematics.
+Mathematics is composed of $N$ theorems. Each theorem, $i$, depends on a number of theorems
+$a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$, which must be proven before one can start with the theorem.
+To prove theorem $i$ you need to spend $t_i$ time. The value of a proven theorem is $v_i$.
+
+You have $T$ time. Choose which theorems you should prove to maximize the total value of the mathematics you have time to reinvent.
+
+
+\section*{Input}
+The first line contains an integer $C$ ($0 \leq C \leq 10$), the number of the test case ($0$ is the example case below).
+
+The second line contains two integers: $N$ ($1 \le N \le 10^5$) and $T$ ($1 \le T \le 10^7$).
+
+Then follows $N$ descriptions of theorems.
+A description of a theorem consists of two rows. First comes a row with the integers $t_i, v_i$ and $k_i$
+($0 \le t_i, v_i \le 10^4$, $0 \le k_i \le N$).
+Then comes a row with $k_i$ integers: $a_{i_1}, a_{i_2}, \cdots, a_{i_k} < i$, the indices of the theorems that
+must be proven before this theorem.
+Theorems are indexed from 0 in the order they appear in the input.
+
+\section*{Output}
+First print an integer $S$ ($0 \leq S \leq N$), the number of theorems that you will prove.
+
+On the next line, print $S$ integers, the theorems that you will prove in the order that you will prove them.
+
+\section*{Points}
+Your program will be tested on $10$ test cases and scored based on how it performs relative to the judges' solution.
+If your submission on a given test case achieves a total value of theorems equal to $X$, and the total value the
+judges have achieved on that test case is $Y$,
+then your score on that test case will be $min(10, 10 \cdot (X / Y)^3)$, rounded to two decimal places.
+
+Your score for a submission is the sum of the scores for the test cases, and your total score is the score for the best submission.
+Thus, it is not possible to combine test cases between different submissions; instead, you must submit a single program that
+maximizes your score on all test cases simultaneously.
+
+The example test case will always give $0$ points.
+
+\section*{Test cases}
+Under attachments at the bottom of the page, you can download testcases generated in the same way as the real
+testcases, but using a different \href{https://en.wikipedia.org/wiki/Random_seed}{random seed}.
+
+The $10$ testcases are described below.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Testcase} & \textbf{Constraints}  \\ \hline
+$1$       & $N=500,T=5000,k_i \le 3$  \\ \hline
+$2$       & $N=500,T=5000,k_i \le 30$  \\ \hline
+$3$       & $N=500,T=50000,k_i \le 3$  \\ \hline
+$4$       & $N=500,T=50000,k_i \le 30$  \\ \hline
+$5$       & $N=10^5,T=10^7,k_i \le 3$  \\ \hline
+$6$       & $N=10^5,T=10^7,k_i \le 30$  \\ \hline
+$7$       & $N=300,T=30000$ and $k_i=1$ for all $i \neq 0$. \\ \hline
+$8$       & $N=300,T=30000$ and every theorem is needed to prove at most one other theorem. \\ \hline
+$9$       & $N=10^5,T=10^7$ and $k_i=1$ for all $i \neq 0$. \\ \hline
+$10$      & $N=10^5,T=10^7$ and every theorem is needed to prove at most one other theorem.  \\ \hline
+\end{tabular}

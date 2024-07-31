@@ -9,12 +9,12 @@ För att skriva in en kod vrider man på skivorna.
 Varje skiva kan sättas i $M$ olika lägen, eftersom mekanismen inte tillåter att du vrider skivan mindre än ett helt segment.
 Låset öppnas om det \emph{någonstans} går ett hål genom alla skivor på samma ställe.
 
-Vi kan beskriva varje skiva som en sträng bestående av ``\texttt{.}'' och ``\texttt{\#}'',
-där ``\texttt{.}'' representerar ett segment med hål i och ``\texttt{\#}'' representerar ett ifyllt segment.
+Vi kan beskriva varje skiva som en sträng bestående av ”\texttt{.}” och ”\texttt{\#}”,
+där ”\texttt{.}” representerar ett segment med hål i och ”\texttt{\#}” representerar ett ifyllt segment.
 Att rotera en skiva ett steg kan då ses som att ta sista tecknet i strängen och lägga det i början.
 Om skivan roteras $M$ steg kommer den tillbaka till läget den började i.
 
-Exempelvis kan skivan ``\texttt{.\#..\#}'' ställas in i följande 5 lägen:
+Exempelvis kan skivan ”\texttt{.\#..\#}” ställas in i följande 5 lägen:
 
 \begin{center}
   \begin{tabular}{c|c|c|c|c}
@@ -26,14 +26,14 @@ Exempelvis kan skivan ``\texttt{.\#..\#}'' ställas in i följande 5 lägen:
   \end{tabular}
 \end{center}
 
-Totalt finns det alltså $M^N$ möjliga sätt att ställa in de $N$ skivorna, och låset öppnas ifall någon kolumn bara består av ``\texttt{.}'' 
+Totalt finns det alltså $M^N$ möjliga sätt att ställa in de $N$ skivorna, och låset öppnas ifall någon kolumn bara består av ”\texttt{.}” 
 när man skriver ut alla skivornas strängar ovanför varandra. Skriv ett program som beräknar hur många olika sätt det finns att ställa in skivorna så att låset öppnas.
 
 \section*{Indata}
 Första raden innehåller heltal $N, M$ ($1\le N, M \le 12$), antalet skivor och antalet segment.
 
 Därefter följer $N$ rader som vardera beskriver en av skivorna.
-Varje skiva beskrivs av $M$ tecken bestående av "\texttt{.}" och "\texttt{\#}".
+Varje skiva beskrivs av $M$ tecken bestående av ”\texttt{.}” och ”\texttt{\#}”.
 
 \section*{Utdata}
 Skriv ut ett heltal: antalet sätt man kan ställa in skivorna så att låset öppnas.
@@ -45,23 +45,20 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \noindent
 \begin{tabular}{| l | l | l |}
   \hline
-  Grupp & Poängvärde & Gränser \\ \hline
+  \textbf{Grupp} & \textbf{Poängvärde} & \textbf{Gränser} \\ \hline
   $1$    & $40$        &  $M, N \le 5$ \\ \hline 
-  $2$    & $20$        &  $N \le 8, M \le 10$, och det finns max 3 hål i varje skiva \\ \hline 
+  $2$    & $20$        &  $N \le 8, M \le 10$, och det finns max 3 hål i varje skiva. \\ \hline 
   $3$    & $40$        &  Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempel}
 
 \begin{itemize}
-  \item
-I det första exempelfallet öppnar alla de nio inställningarna av skivorna låset.
+  \item I det första exempelfallet öppnar alla de nio inställningarna av skivorna låset.
 
-  \item
-I det andra exempelfallet öppnar ingen inställning av skivorna låset, då den andra skivan inte har några hål.
+  \item I det andra exempelfallet öppnar ingen inställning av skivorna låset, då den andra skivan inte har några hål.
 
-  \item
-I det tredje exempelfallet öppnar följande två inställningar låset:
+  \item I det tredje exempelfallet öppnar följande två inställningar låset:
 
 \begin{center}
   \begin{tabular}{c|c}
@@ -71,8 +68,7 @@ I det tredje exempelfallet öppnar följande två inställningar låset:
   \end{tabular}
 \end{center}
 
-  \item
-    I det fjärde exempelfallet finns det tre (av de nio möjliga) inställningar som \textbf{inte} öppnar låset: då "\texttt{.}" i det andra skivan är precis under
-    "\texttt{\#}" i den första skivan.
+  \item I det fjärde exempelfallet finns det tre (av de nio möjliga) inställningar som \textbf{inte} öppnar låset: då ”\texttt{.}” i det andra skivan är precis under
+  ”\texttt{\#}” i den första skivan.
 
 \end{itemize}
