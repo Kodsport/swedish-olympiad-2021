@@ -1,0 +1,30 @@
+\problemname{Kontringsattack}
+
+Friberg and Skog often play the computer game Counter-Attack together. In each match you receive a number of points, which shows how well you performed during the match. Sometimes Skog claims that he is better than Friberg at Counter-Attack, since he has gotten more points than Friberg in a number of matches. Friberg counters by claiming that if the difference between Friberg's and Skog's points in a match is less than or equal to some number $K\ge 0$, then it is impossible to determine who was better in that match. More formally: if Friberg has received $F$ points and Skog has received $S$ points, they count as equally good if $|F - S| \le K$, otherwise the player with the higher score is better.
+
+Naturally, it is Friberg who gets to decide the value of $K$. Given a number of matches and Friberg's and Skog's points in them, what value should Friberg set $K$ to so that the difference between the number of matches where Friberg is better and the number of matches where Skog is better is as large as possible? If there are multiple such values, find the smallest one.
+
+\section*{Input}
+\begin{itemize}
+  \item The first line contains an integer $N$ ($1 \le N \le 100\,000$).
+
+  \item The following $N$ lines contain two integers $F$, $S$ ($0 \le F, S \le 1\,000\,000$), Friberg's points and Skog's points respectively.
+
+\end{itemize}
+
+\section*{Output}
+A single line with the integer $K$.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$    & $15$      & $N \le 100$ and $F,S\le 30$ \\ \hline
+  $2$    & $35$      & $N \le 1\,000$ and $F,S\le 1\,000$\\ \hline
+  $3$    & $50$      & No additional constraints \\ \hline
+\end{tabular}

@@ -1,0 +1,50 @@
+\problemname{Bikupor}
+
+\illustration{0.41}{samples}{Sample $1$ to the left, and sample $2$ to the right.}
+
+
+Beekeeper Bie has concluded that her bees would benefit from moving out into the forest.
+Therefore, she has gotten permission from old man Ljungström to place beehives in his forest.
+Ljungström's forest can be represented as an undirected graph with $N$ nodes and $M$ edges.
+The nodes are numbered from $1$ to $N$. First, Bie gets to choose between $1$ and $N-K$ nodes
+to place her beehives on. However, Ljungström is also a beekeeper, and after Bie has placed her hives, Ljungström will place his own!
+Bie knows that Ljungström will always take the $K$ nodes with the highest numbers among those she
+did not choose. Since Ljungström's bees are unusually aggressive, it is important for Bie to
+make sure that none of her nodes are adjacent to (share an edge with) any of those nodes.
+
+Your task is to find a set of at most $N-K$ nodes such that if Ljungström chooses the
+$K$ remaining nodes with the highest indices, none of them end up adjacent to any of the nodes you chose.
+
+
+\section*{Input}
+The first line contains three integers: $N$ ($2 \le N \le 2 \cdot 10^5$),
+$M$ ($1 \leq M \leq 4\cdot 10^5$), and $K$ ($1 \leq K \leq N-1$).
+
+The following $M$ lines each contain two integers: $u_i$ and $v_i$ ($1 \leq u_i, v_i \leq N$),
+meaning that the $i$th edge connects nodes $u_i$ and $v_i$.
+
+The graph will not contain edges from a node to itself, or multiple edges between the same pair of nodes. It is also guaranteed that the graph is connected, i.e.\ it is possible to travel between every pair of nodes by following edges.
+
+\section*{Output}
+If there is no valid set of nodes, print ``-1''.
+
+Otherwise, first print a line with the integer $L$, the number of nodes in your set.
+Then print a line with $L$ integers $a_1, a_2, \dots , a_L$, the indices of the nodes
+you chose.
+
+If there are multiple solutions, you may print any of them.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$    & $12$        &  $K=1$ \\ \hline
+  $2$    & $15$        &  $N \leq 15$ \\ \hline
+  $3$    & $25$        &  $N \leq 2000$, $M \leq 4000$ \\ \hline
+  $4$    & $13$        &  $K \leq 15$ \\ \hline
+  $5$    & $35$       &  No additional constraints. \\ \hline
+\end{tabular}

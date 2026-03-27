@@ -1,0 +1,36 @@
+\problemname{Robotdammsugaren}
+
+A robot vacuum cleaner is cleaning in a grid-shaped warehouse, where heavy boxes are placed on some cells. The vacuum is controlled by a sequence of commands: up ("\verb|^|"), right ("\verb|>|"), down ("\verb|v|"), left ("\verb|<|").
+When the robot receives a command, it moves as far as it can in that direction until a box is in the way. Every cell the robot vacuum ever occupies is cleaned, including the cell it starts on. Given what the warehouse looks like, the robot's starting position, and a sequence of commands, determine how many \textbf{distinct cells} will have been cleaned when the sequence is finished.
+
+\section*{Input}
+\begin{itemize}
+  \item
+    The first line contains three integers: $R$ ($3 \le R \le 2000$) and $C$ ($3 \le C \le 2000$),
+    the number of rows and columns in the grid-shaped warehouse, and $N$ ($1 \le N \le 2000$), the length of the command sequence.
+
+  \item
+    The second line contains a string of length $N$ consisting of "\verb|^|", "\verb|>|","\verb|v|","\verb|<|", the command sequence sent to the robot.
+
+  \item
+    The following $R$ lines constitute a description of what the grid-shaped warehouse looks like.
+    The $i$th of these lines contains $C$ characters describing what the $i$th row looks like.
+    Each character is either a dot "\verb|.|" if a cell is empty, a hash "\verb|#|" if the cell contains a box, or "\verb|O|" if the cell is the robot's starting position. It is guaranteed that exactly one cell contains "\verb|O|". Furthermore, it is guaranteed that all cells along the edge of the grid are "\verb|#|".
+\end{itemize}
+
+\section*{Output}
+Print a single integer -- the number of distinct cells cleaned by the robot.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$    & $20$        &  The group consists of a single test case, the one on our poster (\url{https://www.progolymp.se/2021/affisch.pdf}). \\ \hline
+  $2$    & $20$        &  $R=3$ \\ \hline
+  $3$    & $30$        &  $N \times R \times C \le 1000$ \\ \hline
+  $4$    & $30$       &  No additional constraints. \\ \hline
+\end{tabular}

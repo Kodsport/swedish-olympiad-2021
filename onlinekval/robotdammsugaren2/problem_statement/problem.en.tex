@@ -1,0 +1,70 @@
+  \problemname{Robotdammsugaren 2}
+
+The problem \textit{Robotdammsugaren} was about counting how many cells a robot vacuum cleaner
+visits in a grid. In this problem you are given the grid and the length of the command sequence
+and should instead find a command sequence that makes the vacuum visit as many distinct cells as possible.
+
+You will receive points depending on how good your solution is compared to the judge solution. This means that it may
+be difficult to get $100$ points, but it need not be so difficult to get partial points.
+
+\section*{Input}
+The input consists of $10$ test cases.
+
+\begin{itemize}
+  \item
+    The first line contains an integer $T$ ($0 \leq T \leq 10$), the number of the test case ($0$ is the sample case below).
+  \item
+    The second line contains three integers: $R$ ($3 \le R \le 2000$) and $C$ ($3 \le C \le 2000$),
+    the number of rows and columns in the grid-shaped warehouse, and $N$ ($1 \le N \le 2000$), the length of the command sequence.
+  \item
+    The following $R$ lines constitute a description of what the grid-shaped warehouse looks like.
+    The $i$th of these lines contains $C$ characters describing what the $i$th row looks like.
+    Each character is either a dot "\verb|.|" if a cell is empty, a hash "\verb|#|" if the cell contains a box, or "\verb|O|" if the cell is the robot's starting position. It is guaranteed that exactly one cell contains "\verb|O|". Furthermore, it is guaranteed that all cells along the edge of the grid are "\verb|#|".
+\end{itemize}
+
+\section*{Output}
+Print a line with a string of length $N$ consisting of the characters "\verb|^|", "\verb|>|","\verb|v|","\verb|<|".
+This is the command sequence that the vacuum will follow.
+
+
+\section*{Scoring}
+Your program will be tested on $10$ test cases, and scored based on how it compares to the judges' solution.
+If your submission on a given test case visits $X$ cells, and the score the judges achieved on that test case is $Y$,
+then your score on that test case is $min(10, 10 \cdot (X / Y))$, rounded to two decimal places.
+
+Your score for a submission is the sum of the scores for the test cases, and your total score is the score of the best submission.
+It is therefore not possible to combine test cases between different submissions; you must submit a single program that
+maximizes your score on all test cases simultaneously.
+
+Your solution can receive at most $100$ points, even if it is better than the one the judges wrote.
+
+The sample test case will always give $0$ points.
+
+
+\section*{Explanation of Sample}
+The sample case is sample $4$ from Robotdammsugaren. The solution given here gets $33$ points, just
+like in the answer to sample $4$.
+
+\section*{Test cases}
+Here are descriptions of the $10$ test cases that appear. The number $B$ is the number of blocked cells not on the edge.
+Grids of type 1 have randomly blocked cells, and the starting cell is also randomly placed.
+Grids of type 2 also have randomly placed blocked cells, but only on the \textit{upper half}
+of the grid. In grids of type 2, the starting cell is randomly placed on one of the cells at the top of the grid.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Test case & Constraints                                     & Grid type \\ \hline
+$1$       & $R = 10$, $C = 10$, $N = 10, B = 10$           & 1  \\ \hline
+$2$       & $R = 100$, $C = 100$, $N = 250, B = 500$         & 1   \\ \hline
+$3$       & $R = 100$, $C = 100$, $N = 250, B = 2000$     & 1   \\ \hline
+$4$       & $R = 100$, $C = 100$, $N = 2000, B = 2000$ & 1  \\ \hline
+$5$       & $R = 500$, $C = 500$, $N = 500, B = 10000$    & 1   \\ \hline
+$6$       & $R = 500$, $C = 500$, $N = 500, B = 50000$   & 1   \\ \hline
+$7$       & $R = 500$, $C = 500$, $N = 500, B = 10000$    & 2   \\ \hline
+$8$       & $R = 2000$, $C = 2000$, $N = 2000, B = 10^5$  & 1  \\ \hline
+$9$       & $R = 2000$, $C = 2000$, $N = 2000, B = 8 \cdot 10^5$ & 1   \\ \hline
+$10$      & $R = 2000$, $C = 2000$, $N = 2000, B = 3 \cdot 10^5$ & 2   \\ \hline
+\end{tabular}
+
+By random we mean here \href{https://en.wikipedia.org/wiki/Discrete_uniform_distribution}{uniformly at random}.

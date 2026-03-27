@@ -1,0 +1,52 @@
+\problemname{Stökiga känguruungar}
+
+A \href{https://en.wikipedia.org/wiki/Kangaroo_word}{kangaroo word} is a word that carries a synonym of itself (a ``joey''), in such a way that all of the synonym's letters appear in the word, in the same order.
+For example, \texttt{pastej} is a kangaroo word, since it carries the synonym \texttt{paj} (\texttt{\textbf{pa}ste\textbf{j}}).
+Also \texttt{aste} and \texttt{atj} would count as joeys if we pretend they were words, but not \texttt{paaj} or \texttt{etsa}.
+Formally, the joey must be a \emph{subsequence} of the word.
+
+Furthermore, we say that a joey is \emph{rowdy} if it fits in the word in two different ways.
+\texttt{paj} is not a rowdy joey, but if the original word had been \texttt{paastej} it would have been --
+then it could have been hidden as either \texttt{\textbf{pa}aste\textbf{j}} or \texttt{\textbf{p}a\textbf{a}ste\textbf{j}}.
+
+Given a (made-up) word $S$, and a list of (made-up) synonyms, how many of the synonyms are rowdy joeys of $S$?
+
+\section*{Input}
+\begin{itemize}
+  \item
+    The first line contains a non-empty string consisting of letters \texttt{a-z}, the word $S$ that we are wondering about.
+
+  \item
+    The second line contains the integer $N$ ($1 \le N \le 100\,000$): the number of synonyms of the word.
+
+  \item
+    The following $N$ lines contain the synonyms, each a non-empty string consisting of letters \texttt{a-z}.
+\end{itemize}
+
+No synonym will appear twice, or be equal to $S$.
+
+Let $M$ denote the number of letters in $S$, and $K$ the sum of the number of letters in the synonyms.
+Then $M \le 100\,000$, $K \le 500\,000$.
+
+\section*{Output}
+Print a single integer -- the number of words that are rowdy joeys of $S$.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$   & $20$       & $N, M, K \le 100$. \\ \hline
+  $2$   & $20$       & $N, M \le 1000$, and all joeys are rowdy joeys. \\ \hline
+  $3$   & $20$       & $N, M \le 1000$. \\ \hline
+  $4$   & $20$       & All joeys are rowdy joeys. \\ \hline
+  $5$   & $20$       & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+In sample 1, the first three words are joeys of $S$, and moreover rowdy. The test case could therefore appear in test group 2 or 4.
+
+In sample 2, the first four words are joeys, of which the first two are also rowdy joeys. This test case could not appear in test group 2 or 4.

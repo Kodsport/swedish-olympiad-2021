@@ -1,0 +1,44 @@
+\problemname{Baka bullar}
+You have baked buns and placed them in a long row. In total you have $N$ buns, where the $i$th one is at
+$x$-coordinate $x_i$. You would like to gather the buns so that they are next to each other, i.e.\
+at coordinates $a, a+1, a+2, \dots, a+N-1$ for some $a$. But the buns are very hot and can
+only be handled using a spatula of width $D$. In one move you can choose an interval of length
+$D$ and reverse all buns in that interval. More specifically, you can choose an interval of the form
+$[L, L+D-1]$. A bun whose $x$-coordinate satisfies $L \leq x_i \leq L+D-1$ is then moved to $x$-coordinate
+$L + D - 1 - (x_i - L)$.
+
+You are given the positions of the $N$ buns and the number $D$. Your task is to find a sequence of moves
+so that the buns end up next to each other. You may use at most $10^5$ moves.
+
+
+\section*{Input}
+The first line contains two integers $N$ and $D$ ($2 \leq N, D \leq 200$).
+
+The second line contains $N$ integers $x_i$ ($1 \leq x_i \leq 200$). All values $x_i$ are distinct.
+
+\section*{Output}
+If there is no solution, print ``-1''.
+
+Otherwise, first print a line with the integer $M$ ($0 \leq M \leq 10^5$), the number of moves.
+Then print $M$ lines, where the $i$th contains the integer $L_i$.
+
+This means that the $i$th move reverses the interval $[L_i, L_i + D - 1]$.
+The value $L_i$ may be almost\footnote{The integer must satisfy $-2147483648 \leq L_i \leq 2147483647$, otherwise you get a wrong answer.} any integer, including negative.
+The solution is counted as correct if the buns are next to each other after all moves have been performed.
+The order of the buns does not matter.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$    & $9$        &  $N=2$ \\ \hline
+  $2$    & $9$        &  $D=2$ \\ \hline
+  $3$    & $14$        &  $D=3$ \\ \hline
+  $4$    & $14$        &  $N, D, x_i \leq 5$ \\ \hline
+  $5$    & $24$        &  $N, D, x_i \leq 30$ \\ \hline
+  $6$    & $30$        &  No additional constraints. \\ \hline
+\end{tabular}
