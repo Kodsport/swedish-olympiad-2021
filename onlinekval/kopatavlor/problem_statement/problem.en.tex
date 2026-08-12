@@ -1,0 +1,27 @@
+\problemname{Köpa tavlor}
+\illustration{0.3}{paint}{cc by-s}
+Mona has just moved and is now starting to decorate. She has determined that she needs exactly $k$ paintings, and has gone to the art market to shop. Mona is very wealthy, and does not care at all about how much the paintings cost, but instead just wants to finish as quickly as possible.
+
+At the market, $N$ paintings are sold along a long street. Painting $i$ takes $t_i$ seconds to buy. Walking from one painting to the next takes 1 second. Mona takes the bus there and back, so she can choose at which painting she starts and ends. What is the shortest time in which Mona can buy $k$ paintings?
+
+\section*{Input}
+The first line contains two integers: $N$ ($1 \le N \le 2000$), the number of paintings at the market, and $k$ ($1 \le k \le N$), the number of paintings Mona needs to buy.
+
+The second line contains $N$ integers: $1 \le t_1,t_2,...t_n \le 1000$, the number of seconds it takes to buy each painting.
+
+\section*{Output}
+Print a single integer -- the minimum number of seconds it can take for Mona to buy $k$ paintings.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$    & $7$        &  $k=1$ \\ \hline
+  $2$    & $10$        &  $k=2$ \\ \hline
+  $3$    & $30$        &  $N \le 200$ \\ \hline
+  $4$    & $53$       &  No additional constraints. \\ \hline
+\end{tabular}
